@@ -1,6 +1,6 @@
 # PILA dashboard
 
-[Current preview of Karel](https://chrispiech.github.io/pisaPrototype/)
+[Conceptual mapping of Karel indicators](https://docs.google.com/drawings/d/1A8KhKQJ4ryChVazJKYhgPlTaB-iFcCZ8VmQ-XreGiOM/edit)
 
 
 The diagram below presents a high-level overview of the proposed **Dashboard**. A loosely coupled architecture ensures system reliability in case of failures along the pipeline. The system is composed of three components:
