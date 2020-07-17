@@ -6,16 +6,16 @@ source $1/path.bash.inc
 
 
 #from cwd
-docker build -t helloworld:latest .
+docker build -t flaskdash:latest .
 
 
-docker tag helloworld gcr.io/lexical-archery-252114/helloworld:latest
+docker tag flaskdash gcr.io/lexical-archery-252114/flaskdash:latest
 
 #once per session
 #gcloud auth login
 
 #then
-docker push gcr.io/lexical-archery-252114/helloworld:latest
+docker push gcr.io/lexical-archery-252114/flaskdash:latest
 
 
 #create gce instance from container and run as privileged
@@ -24,10 +24,10 @@ docker push gcr.io/lexical-archery-252114/helloworld:latest
 
 #--image-family ubuntu-minimal-1804-lts --image-project cost-stable \
 
-gcloud compute instances create-with-container flask-pilatest88 \
+gcloud compute instances create-with-container flaskdash-pila2 \
 --zone europe-west4-a \
 --tags http-server,https-server \
---container-image=gcr.io/lexical-archery-252114/helloworld \
+--container-image=gcr.io/lexical-archery-252114/flaskdash \
  --container-privileged
 
 #only once
