@@ -5,8 +5,9 @@ import dash
 import dash_table
 import dash_html_components as html
 import dash_core_components as dcc
-from .data import create_dataframe
+from .data import CreateDataTable #changed from create_dataframe
 from .layout import html_layout
+import plotly.express as px
 
 
 def create_dashboard(server):
@@ -21,29 +22,40 @@ def create_dashboard(server):
     )
 
     # Load DataFrame
-    df = create_dataframe()
-
+    # df = create_dataframe()
+    df = CreateDataTable(db_name="karelDB")
     # Custom HTML layout
     dash_app.index_string = html_layout
 
     # Create Layout
+    # dash_app.layout = html.Div(
+    #     children=[dcc.Graph(
+    #         id='histogram-graph',
+    #         figure={
+    #             'data': [{
+    #                 'x': df['complaint_type'],
+    #                 'text': df['complaint_type'],
+    #                 'customdata': df['key'],
+    #                 'name': '311 Calls by region.',
+    #                 'type': 'histogram'
+    #             }],
+    #             'layout': {
+    #                 'title': 'NYC 311 Calls category.',
+    #                 'height': 500,
+    #                 'padding': 150
+    #             }
+    #         }),
+    #         create_data_table(df)
+    #     ],
+    #     id='dash-container'
+    # )
+
+    fig = px.bar(df, x='action', y='count')
+
     dash_app.layout = html.Div(
         children=[dcc.Graph(
-            id='histogram-graph',
-            figure={
-                'data': [{
-                    'x': df['complaint_type'],
-                    'text': df['complaint_type'],
-                    'customdata': df['key'],
-                    'name': '311 Calls by region.',
-                    'type': 'histogram'
-                }],
-                'layout': {
-                    'title': 'NYC 311 Calls category.',
-                    'height': 500,
-                    'padding': 150
-                }
-            }),
+            id='bar-graph',
+            figure=fig),
             create_data_table(df)
         ],
         id='dash-container'

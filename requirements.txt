@@ -1,6 +1,7 @@
 attrs==19.3.0
 Brotli==1.0.7
 click==7.1.2
+collections
 dash==1.12.0
 dash-core-components==1.10.0
 dash-html-components==1.0.3
@@ -12,6 +13,7 @@ Flask-Compress==1.5.0
 future==0.18.2
 itsdangerous==1.1.0
 Jinja2==2.11.2
+matplotlib
 MarkupSafe==1.1.1
 more-itertools==8.3.0
 numpy==1.18.5
@@ -25,8 +27,11 @@ pytest==5.4.3
 python-dateutil==2.8.1
 python-dotenv==0.13.0
 pytz==2020.1
+requests
 retrying==1.3.3
+seaborn
 six==1.15.0
+time
 wcwidth==0.2.5
 webassets==2.0
 Werkzeug==1.0.1

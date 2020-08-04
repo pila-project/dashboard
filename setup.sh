@@ -24,17 +24,18 @@ docker push gcr.io/lexical-archery-252114/flaskdash:latest
 
 #--image-family ubuntu-minimal-1804-lts --image-project cost-stable \
 
-gcloud compute instances create-with-container flaskdash-pila2 \
+gcloud compute instances create-with-container flaskdash-pila \
 --zone europe-west4-a \
 --tags http-server,https-server \
 --container-image=gcr.io/lexical-archery-252114/flaskdash \
  --container-privileged
 
 #only once
+# cmd /
 # gcloud compute firewall-rules create default-allow-http-5000 \
- #   --allow tcp:5000 \
-  #  --source-ranges 0.0.0.0/0 \
-   # --target-tags http-server \
-    #--description "Allow port 5000 access to http-server"
+#    --allow tcp:5000 \
+#    --source-ranges 0.0.0.0/0 \
+#    --target-tags http-server \
+#    --description "Allow port 5000 access to http-server"
 
 
