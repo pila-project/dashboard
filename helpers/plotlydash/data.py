@@ -2,6 +2,11 @@
 import pandas as pd
 import numpy as np
 
+from .filemanager import ReadFirestoreCollection, TimeConverter, CreateTable
+from collections import Counter
+from google.cloud import firestore
+
+
 # def create_dataframe():
 #     """Create Pandas DataFrame from local CSV."""
 #     df = pd.read_csv('data/311-calls.csv', parse_dates=['created'])
@@ -13,11 +18,10 @@ import numpy as np
 #     return df
 
 
-from .filemanager import ReadFirestoreCollection, TimeConverter, CreateTable
-from collections import Counter
 
 
 def CreateDataTable(db_name:str="karelDB"):
+
 
     results =  ReadFirestoreCollection(db_name=db_name)
 

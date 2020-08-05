@@ -9,6 +9,9 @@ from .data import CreateDataTable #changed from create_dataframe
 from .layout import html_layout
 import plotly.express as px
 
+from google.cloud import firestore
+
+
 
 def create_dashboard(server):
     """Create a Plotly Dash dashboard."""
@@ -23,6 +26,7 @@ def create_dashboard(server):
 
     # Load DataFrame
     # df = create_dataframe()
+
     df = CreateDataTable(db_name="karelDB")
     # Custom HTML layout
     dash_app.index_string = html_layout
