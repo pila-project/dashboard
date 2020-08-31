@@ -10,6 +10,8 @@ def create_app():
     assets = Environment()
     assets.init_app(app)
 
+
+
     with app.app_context():
         # Import parts of our core Flask app
         from . import routes

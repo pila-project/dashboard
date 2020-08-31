@@ -6,15 +6,15 @@ html_layout = '''
         <head>
             {%metas%}
             <title>{%title%}</title>
-            {%favicon%}
+            {%PILA_logo%}
             {%css%}
         </head>
         <body class="dash-template">
             <header>
               <div class="nav-wrapper">
                 <a href="/">
-                    <img src="/static/img/logo.png" class="logo" />
-                    <h1>Plotly Dash Flask Tutorial</h1>
+                    <img src="/static/img/PILA_logo.png" class="logo" />
+                    <h1>PILA Results Dashboard</h1>
                   </a>
                 <nav>
                 </nav>

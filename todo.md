@@ -1,9 +1,9 @@
+
  ### Technical components
  - Plots
- - Connect to bucket
- - Processing pipeline (Cloud Function)
+ - Processing pipeline (Cloud Function vs RT Listener + Flask app)
  - Production server (nginx and gunicorn)
- - wrap it into cloud build (from project definition down)       
+ - security/login
  
  ### Content
  
@@ -12,3 +12,11 @@
   - API from Jason
   - 
  
+ 
+### Improvements
+ - alpine/python image
+ - UI
+ - wrap it into cloud build 
+ - rename helpers and plotlydash
+
+
