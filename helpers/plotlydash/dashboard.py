@@ -10,9 +10,10 @@ from dash.dependencies import Input, Output
 from .data import CreateDataFrame #changed from create_dataframe
 from .layout import html_layout
 import plotly.express as px
-import datetime
-
+import datetime, time
+from .filemanager import FirestoreListener, CreateTable
 from google.cloud import firestore
+from collections import Counter
 
 
 
@@ -27,17 +28,17 @@ def create_dashboard(server):
         ]
     )
 
+    ms_interval = 5 * 1000
+
     # Custom HTML layout
     dash_app.index_string = html_layout
-
-    # dash_app.layout = ServeLayout
 
     dash_app.layout = html.Div(
         children=[
             dcc.Graph(
             id='bar-graph'),
 
-            html.H1('The time is: ' + str(datetime.datetime.now())),
+            #html.H1('The time is: ' + str(datetime.datetime.now())),
 
             dash_table.DataTable(
                 id='data-table',
@@ -47,31 +48,57 @@ def create_dashboard(server):
 
             dcc.Interval(
             id = 'track-interval',
-                interval = 5 * 1000,  # in milliseconds,
+                interval = ms_interval,  # in milliseconds,
                 n_intervals = 0),
         ],
         id='dash-container'
     )
 
-    init_callbacks(dash_app)
+    results, read_time_list = FirestoreListener(collection_name='karelDB')
+
+    init_callbacks(dash_app, results, read_time_list, ms_interval)
 
     return dash_app.server
 
-#        html.Div(id='live-update-text'),
 
 
-def init_callbacks(dash_app):
+def init_callbacks(dash_app, results, read_time_list, ms_interval):
     @dash_app.callback(
         [Output('bar-graph', 'figure'), Output('data-table','data'), Output('data-table','columns') ],
         [Input('track-interval', 'n_intervals')]
     )
     def update_graphs(rows):
-        # Callback logic
-        df = CreateDataFrame(collection_name="karelDB")
+        #if latest readtime different from current, update. how about first caase?
+        #if latest_read_time
+        if (read_time_list[-1].timestamp() * 1000 < datetime.datetime.now().timestamp() * 1000 - ms_interval*2):
 
-        fig = px.bar(df, x='Action', y='Count')
+            print('nothing has changed between {} and now {}'.format(read_time_list[-1], datetime.datetime.utcnow()))
+            try:
+                df
+            except NameError:
+                print('df doesn\'t exist')
+                counter = Counter(CreateTable('data', results))
+                df = pd.DataFrame(list(counter.items()), columns=['Action', 'Count']).sort_values('Count',ascending=False)
+                df = df[~(df.Action.str.contains("xml"))]
 
-        fig.update_layout(transition_duration=500)
+            else:
+                print('df exists')
+                pass
+        else:
+            print('something has changed between {} and now {}'.format(read_time_list[-1],datetime.datetime.utcnow()))
+            counter = Counter(CreateTable('data', results))
+            df = pd.DataFrame(list(counter.items()), columns=['Action', 'Count']).sort_values('Count',ascending=False)
+            df = df[~(df.Action.str.contains("xml"))]
+
+
+        fig = px.bar(df, x='Action', y='Count', opacity = 0.6)
+
+        # Customize aspect
+        fig.update_traces(marker_color='rgb(158,202,225)', marker_line_color='rgb(8,48,107)',
+                          marker_line_width=1.5, opacity=0.6)
+
+        fig.update_layout(title_text='Count of user action as of {}'.format(datetime.datetime.utcnow().strftime("%Y-%m-%d, %H:%M:%S")))
+
 
         data = df.to_dict('records')
 
@@ -82,17 +109,6 @@ def init_callbacks(dash_app):
 
 
 
-
-# def ServeLayout():
-#     return html.Div(
-#         children=[dcc.Graph(
-#             id='bar-graph',
-#             figure=fig),
-#             CreateDataTable(df),
-#             html.H1('The time is: ' + str(datetime.datetime.now()))
-#         ],
-#         id='dash-container'
-#     )
 
 
 

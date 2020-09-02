@@ -1,9 +1,8 @@
-
  ### Technical components
- - Plots
- - Processing pipeline (Cloud Function vs RT Listener + Flask app)
+ - Plots/tabs
+ - Make callbacks templates
  - Production server (nginx and gunicorn)
- - security/login
+ - login from PILA 
  
  ### Content
  
@@ -14,9 +13,10 @@
  
  
 ### Improvements
+ - update readme 
  - alpine/python image
  - UI
  - wrap it into cloud build 
- - rename helpers and plotlydash
+ - rename folders
 
 
