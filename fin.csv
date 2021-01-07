@@ -1,0 +1,8 @@
+,userId,data,date,type,currentView,item
+992,5d4957bc034616000180b907,successful,2021-01-06T01:03:05.436Z,RUN_DONE,Checker,Challenge
+1002,5fe8d26e88f0577d2608884f,successful,2021-01-06T01:04:25.991Z,RUN_DONE,Checker,Challenge
+1645,5d78647e4dadc9001a3e34dd,unsuccessful,2021-01-06T00:58:41.334Z,RUN_DONE,Checker,Challenge
+2841,5d4957bc034616000180b907,unsuccessful,2021-01-06T01:01:59.341Z,RUN_DONE,Checker,Challenge
+4735,5d78647e4dadc9001a3e34dd,unsuccessful,2021-01-06T01:05:19.681Z,RUN_DONE,Checker,Challenge
+5701,mario2,successful,2021-01-01T19:47:58.143Z,RUN_DONE,Checker,Challenge
+6855,5d4957bc034616000180b907,unsuccessful,2021-01-06T00:59:20.394Z,RUN_DONE,Checker,Challenge

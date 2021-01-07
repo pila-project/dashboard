@@ -6,14 +6,13 @@ html_layout = '''
         <head>
             {%metas%}
             <title>{%title%}</title>
-            {%PILA_logo%}
             {%css%}
         </head>
         <body class="dash-template">
             <header>
               <div class="nav-wrapper">
                 <a href="/">
-                    <img src="/static/img/PILA_logo.png" class="logo" />
+                    <img src="/static/img/PILA_logo.png" class="logo"/>
                     <h1>PILA Results Dashboard</h1>
                   </a>
                 <nav>

@@ -11,10 +11,13 @@ from .data import CreateDataFrame #changed from create_dataframe
 from .layout import html_layout
 import plotly.express as px
 import datetime, time
-from .filemanager import FirestoreListener, CreateTable
+from .filemanager import FirestoreListener, CreateTable, IndexFlattener, DataBars, MaxValueTableStyler, IntermediateDataMaker
 from google.cloud import firestore
 from collections import Counter
+from .tabs import Table
 
+import json
+import dash_building_blocks as dbb
 
 
 def create_dashboard(server):
@@ -24,91 +27,131 @@ def create_dashboard(server):
         routes_pathname_prefix='/dashapp/',
         external_stylesheets=[
             '/static/dist/css/styles.css',
-            'https://fonts.googleapis.com/css?family=Lato'
+            'https://fonts.googleapis.com/css?family=Lato',
+            'https://codepen.io/chriddyp/pen/bWLwgP.css'
         ]
     )
 
-    ms_interval = 5 * 1000
+    ms_interval = 6 * 1000
+
+    table_metrics = ['attempts','success']
+    tab_names = ['tab1', 'tab2']
+    tables = [Table(app=dash_app, data={'name': name, 'tab':tab_names[0]}) for name in table_metrics]
+
+    store = dbb.Store(dash_app)
+    store.register('intermediate-data')
 
     # Custom HTML layout
     dash_app.index_string = html_layout
 
-    dash_app.layout = html.Div(
-        children=[
-            dcc.Graph(
-            id='bar-graph'),
+    tabs= ['tab1','tab2']
 
-            #html.H1('The time is: ' + str(datetime.datetime.now())),
+    dash_app.layout = \
+        html.Div([
+            dcc.Tabs(
+                    [dcc.Tab(
+                        label=tab,
+                        children =
+                        html.Div(
+                            [table.layout for table in tables if table.data.tab == tab]
+                        )
+                    ) for tab in tabs]
+            ),
 
-            dash_table.DataTable(
-                id='data-table',
-                sort_action="native",
-                sort_mode='native',
-                page_size=300),
-
+            # this below is the div for the plots. It is assigned to both Tabs unless stated otherwise
+            html.Div(id = 'graph-container'),
             dcc.Interval(
-            id = 'track-interval',
-                interval = ms_interval,  # in milliseconds,
-                n_intervals = 0),
-        ],
-        id='dash-container'
-    )
+                id='track-interval',
+                interval=ms_interval,  # in milliseconds,
+                n_intervals=0
+            ),
+            store.layout
+        ], id='dash-container', className='row')
 
     results, read_time_list = FirestoreListener(collection_name='karelDB')
 
-    init_callbacks(dash_app, results, read_time_list, ms_interval)
+    init_callbacks(dash_app, results, tables, table_metrics, store)
 
     return dash_app.server
 
 
+def init_callbacks(dash_app, results, tables, table_metrics, store):
 
-def init_callbacks(dash_app, results, read_time_list, ms_interval):
     @dash_app.callback(
-        [Output('bar-graph', 'figure'), Output('data-table','data'), Output('data-table','columns') ],
+        store.output('intermediate-data'),
         [Input('track-interval', 'n_intervals')]
     )
-    def update_graphs(rows):
-        #if latest readtime different from current, update. how about first caase?
-        #if latest_read_time
-        if (read_time_list[-1].timestamp() * 1000 < datetime.datetime.now().timestamp() * 1000 - ms_interval*2):
 
-            print('nothing has changed between {} and now {}'.format(read_time_list[-1], datetime.datetime.utcnow()))
-            try:
-                df
-            except NameError:
-                print('df doesn\'t exist')
-                counter = Counter(CreateTable('data', results))
-                df = pd.DataFrame(list(counter.items()), columns=['Action', 'Count']).sort_values('Count',ascending=False)
-                df = df[~(df.Action.str.contains("xml"))]
+    # query data has to be rewritten. no point in creating a df just to feed into the datamaker
 
-            else:
-                print('df exists')
-                pass
+    def query_data(n_intervals):
+
+        df_raw = pd.DataFrame(CreateTable(['userId', 'data','date', 'type', 'currentView','item'], results))
+
+        if len(df_raw) == 0:
+            return dash.no_update
         else:
-            print('something has changed between {} and now {}'.format(read_time_list[-1],datetime.datetime.utcnow()))
-            counter = Counter(CreateTable('data', results))
-            df = pd.DataFrame(list(counter.items()), columns=['Action', 'Count']).sort_values('Count',ascending=False)
-            df = df[~(df.Action.str.contains("xml"))]
+            # this could then be added to a dict of dicts eg. level 1 key tab, level 2 key table in tab
+            df= IntermediateDataMaker(df_raw, table_metrics)
 
+            return json.dumps(df)
 
-        fig = px.bar(df, x='Action', y='Count', opacity = 0.6)
+    for table in tables:
+        table.callbacks(store.input('intermediate-data'))
 
-        # Customize aspect
-        fig.update_traces(marker_color='rgb(158,202,225)', marker_line_color='rgb(8,48,107)',
-                          marker_line_width=1.5, opacity=0.6)
+    @dash_app.callback(
+        Output('graph-container', 'children'),
+        [store.input('intermediate-data')]
+    )
+    def update_table(dfs):
 
-        fig.update_layout(title_text='Count of user action as of {}'.format(datetime.datetime.utcnow().strftime("%Y-%m-%d, %H:%M:%S")))
+        if dfs is None:
+            return dash.no_update
+        else:
+            datasets = json.loads(dfs)
 
+            value = "attempts"
 
-        data = df.to_dict('records')
+            df = pd.read_json(datasets[value], orient='split')
 
-        columns = [{"name": i, "id": i} for i in df.columns]
+            colors = ['#0074D9' for i in range(len(df))]
 
-        return fig, data, columns
+            # make columns selectable
+            # number of actions before completions, times it saw example?
 
+            graph = [html.Div(dcc.Graph(
+                id=column,
+                figure={
+                    "data": [
+                        {
+                            "x": df["userId"],
+                            "y": df[column],
+                            "type": "bar",
+                            "marker": {"color": colors},
+                        }
+                    ],
+                    "layout": {
+                        "xaxis": {"automargin": True,
+                                  'tickangle': -90},
+                        "yaxis": {
+                            "automargin": True
+                        },
+                        "height": 350,
+                        # 'paper_bgcolor' : 'rgba(103,128,159,0.5)',
+                        'plot_bgcolor': 'rgba(171, 183, 183, 0.2)',
+                        "margin": {"t": 30, "l": 10, "r": 10},
+                        "title": {
+                            'text': column,
+                            'y': 0.97,
+                            'x': 0.5,
+                            'xanchor': 'center',
+                            'yanchor': 'top'}
+                    },
+                },
+            ),
+                className='three columns'
+            )
+                for column in df.columns[1:]]
 
-
-
-
-
+            return graph
 

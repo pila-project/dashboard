@@ -1,0 +1,11 @@
+,userId,data,date,type,currentView,item
+439,5e9b725d85157c0816f1f0dd,Checker,2021-01-06T00:58:10.870Z,TIMEDOUT,Checker,Challenge
+1534,5e9b725d85157c0816f1f0dd,Checker,2021-01-06T00:58:22.597Z,TIMEDOUT,Checker,Challenge
+2537,5fe7673ee14422582703e754,Checker,2021-01-06T01:42:58.925Z,TIMEDOUT,Checker,Challenge
+3582,5fe7673ee14422582703e754,Checker,2021-01-06T01:42:50.175Z,TIMEDOUT,Checker,Challenge
+3796,chidera933,Checker,2021-01-06T01:50:40.239Z,TIMEDOUT,Checker,Challenge
+4171,5d78647e4dadc9001a3e34dd,Checker,2021-01-06T01:06:17.447Z,TIMEDOUT,Checker,Challenge
+5128,5e9b725d85157c0816f1f0dd,Checker,2021-01-06T01:03:09.759Z,TIMEDOUT,Checker,Challenge
+5661,5d78647e4dadc9001a3e34dd,Checker,2021-01-06T01:06:29.547Z,TIMEDOUT,Checker,Challenge
+6379,5fe7673ee14422582703e754,Checker,2021-01-06T01:42:31.190Z,TIMEDOUT,Checker,Challenge
+6474,5d78647e4dadc9001a3e34dd,"<xml><block type=""karel_main"" deletable=""false"" movable=""false"" x=""20"" y=""20""><statement name=""program""><block type=""controls_repeat_ext""><value name=""TIMES""><shadow type=""math_number""><field name=""NUM"">10</field></shadow></value><statement name=""DO""><block type=""controls_repeat_ext""><value name=""TIMES""><shadow type=""math_number""><field name=""NUM"">2</field></shadow></value><statement name=""DO""><block type=""controls_repeat_ext""><value name=""TIMES""><shadow type=""math_number""><field name=""NUM"">4</field></shadow></value><statement name=""DO""><block type=""karel_pickup_stone""></block></statement><next><block type=""karel_move""><next><block type=""karel_move""></block></next></block></next></block></statement><next><block type=""controls_repeat_ext""><value name=""TIMES""><shadow type=""math_number""><field name=""NUM"">4</field></shadow></value><statement name=""DO""><block type=""karel_pickup_stone""></block></statement><next><block type=""karel_move""><next><block type=""karel_turn_left""><next><block type=""karel_move""><next><block type=""karel_turn_left""></block></next></block></next></block></next></block></next></block></next></block></statement></block></statement></block></xml>",2021-01-06T01:06:12.020Z,TIMEDOUT,Checker,Challenge
