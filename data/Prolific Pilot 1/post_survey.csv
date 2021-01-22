@@ -1,0 +1,96 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,Q7,Q6,Q13,Q14,Q1,Q5,Q3,Q4_1,Q4_2,Q4_3,Q4_4,Q12,userIdKarel
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,How much did you enjoy the programming activity?,How mentally demanding was the Karel programming activity for you?,How many of the programming problems have you been able to solve?,If you haven't solved all 5 problems: What was the issue with the ones that you have not been able to solve in time?,How do you estimate your programming experience?,"On a scale from 1 to 5, how do you estimate your programming experience?","How many computer science courses, semesters or tutorials have you taken before (in compulsory school, at a university or elsewhere)?","Please rate your level of competence with the following programming languages?
+Circle one number for each language/group of languages. Use the following scale:
+
+					1. Never programmed in this language.
+
+2. Minimal experience. Maybe compiled a test program.
+
+3. Some experience. Wrote one or two small programs.
+
+4. Substantial experience. Wrote several small to medium-sized programs.
+
+				
+			
+			
+				
+					5. Extensive experience. Wrote many programs. - C++ or Java","Please rate your level of competence with the following programming languages?
+Circle one number for each language/group of languages. Use the following scale:
+
+					1. Never programmed in this language.
+
+2. Minimal experience. Maybe compiled a test program.
+
+3. Some experience. Wrote one or two small programs.
+
+4. Substantial experience. Wrote several small to medium-sized programs.
+
+				
+			
+			
+				
+					5. Extensive experience. Wrote many programs. - Visual Basic","Please rate your level of competence with the following programming languages?
+Circle one number for each language/group of languages. Use the following scale:
+
+					1. Never programmed in this language.
+
+2. Minimal experience. Maybe compiled a test program.
+
+3. Some experience. Wrote one or two small programs.
+
+4. Substantial experience. Wrote several small to medium-sized programs.
+
+				
+			
+			
+				
+					5. Extensive experience. Wrote many programs. - Python, Perl or other scripting based languages","Please rate your level of competence with the following programming languages?
+Circle one number for each language/group of languages. Use the following scale:
+
+					1. Never programmed in this language.
+
+2. Minimal experience. Maybe compiled a test program.
+
+3. Some experience. Wrote one or two small programs.
+
+4. Substantial experience. Wrote several small to medium-sized programs.
+
+				
+			
+			
+				
+					5. Extensive experience. Wrote many programs. - Javascript, HTML, ASP or other web based languages",Do you have some other questions or comments? Please let us know:,userIdKarel
+"{""ImportId"":""startDate"",""timeZone"":""America/Los_Angeles""}","{""ImportId"":""endDate"",""timeZone"":""America/Los_Angeles""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""America/Los_Angeles""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID7""}","{""ImportId"":""QID6""}","{""ImportId"":""QID13""}","{""ImportId"":""QID14_TEXT""}","{""ImportId"":""QID1""}","{""ImportId"":""QID5""}","{""ImportId"":""QID3""}","{""ImportId"":""QID4_1""}","{""ImportId"":""QID4_2""}","{""ImportId"":""QID4_3""}","{""ImportId"":""QID4_4""}","{""ImportId"":""QID11_TEXT""}","{""ImportId"":""userIdKarel""}"
+1/8/21 12:04,1/8/21 12:05,IP Address,37.189.207.195,100,94,TRUE,1/8/21 12:05,R_2V28h7RcerXu2gg,,,,,41.30059814,-7.744094849,anonymous,EN,A little,Very demanding,1 problem,i didn't understand why the turtle would go in front and i couldn't give her any other orders,I have never programmed before.,,,,,,,,5ca8c84e92fdc200129e9db3
+1/8/21 12:14,1/8/21 12:14,IP Address,89.115.154.134,100,37,TRUE,1/8/21 12:14,R_21gOHcGoF00RGOx,,,,,38.71670532,-9.133300781,anonymous,EN,A great deal,Slightly demanding,All 5 problems,,I have programmed before.,3,2,1,1,3,1,,5d694784be10f9001511d7a3
+1/8/21 12:34,1/8/21 12:37,IP Address,89.212.112.47,100,174,TRUE,1/8/21 12:37,R_1kYPXn1QvPsiCOo,,,,,46.230896,15.26040649,anonymous,EN,A great deal,Moderately demanding,All 5 problems,"Solved all 5 but I would like to point out there was an issue in the 5th case where it was automatically going into the functions even when I removed them from main. I deleted all and restarted, then it worked fine",I have programmed before.,3,4 or more,3,2,3,5,"Very fun and interesting task, keep them up and you will inspire many more for programming careers! :)",5e4c214a69cc03000caf6259
+1/8/21 12:40,1/8/21 12:46,IP Address,5.90.75.135,100,376,TRUE,1/8/21 12:46,R_2E6wOuouHSA7lc8,,,,,43.14790344,12.10969543,anonymous,EN,A lot,Moderately demanding,4 problems,I would be able to solve it if I could have much more time. ,I have never programmed before.,,,,,,,,5f512f610a752a32cf96d74f
+1/8/21 14:03,1/8/21 14:04,IP Address,93.34.151.0,100,74,TRUE,1/8/21 14:04,R_2aREjFh5yMNimT9,,,,,45.07049561,7.686798096,anonymous,EN,A moderate amount,Very demanding,4 problems,Figure out too late how to fix errors with 5th one,I have never programmed before.,,,,,,,,5eda126ec6a418029cb19e91
+1/9/21 3:41,1/9/21 3:42,IP Address,212.216.191.125,100,38,TRUE,1/9/21 3:42,R_1mW2wT32AyG6O3d,,,,,41.89190674,12.51130676,anonymous,EN,A great deal,Slightly demanding,All 5 problems,,I have programmed before.,3,2,1,1,4,4,,5c44ad201ddd660001ca00b0
+1/9/21 3:42,1/9/21 3:43,IP Address,79.73.122.247,100,109,TRUE,1/9/21 3:43,R_bDBBCaBfI3qAyKB,,,,,52.33439636,-0.598403931,anonymous,EN,A lot,Moderately demanding,2 problems,"wasn't sure how to get a stohne when there wasn't one there, also not clear how to define turn right in terms of multiple turns left would have been good to have an example of that",I have programmed before.,3,4 or more,1,5,4,1,it was an interesting experience but I would include much more training material before the tasks,5c28efb626e55d0001a685b1
+1/9/21 3:49,1/9/21 3:50,IP Address,193.136.33.109,100,88,TRUE,1/9/21 3:50,R_10UahCD41taB17P,,,,,41.14959717,-8.610992432,anonymous,EN,A great deal,Very demanding,4 problems,"The last one I got distracted and inserted the command to return to the start in the repeat loop, having just realized it at the end",I have programmed before.,2,1,1,3,1,1,,5c102d91e32f860001651a93
+1/9/21 3:51,1/9/21 3:53,IP Address,89.180.53.180,100,105,TRUE,1/9/21 3:53,R_3CJILjP98Mwjf1r,,,,,41.42799377,-8.67250061,anonymous,EN,A lot,Very demanding,4 problems,"I was trying to do it without any functions, and I had no time",I have programmed before.,3,3,4,1,5,2,,5efb2cae4187a504713a4081
+1/9/21 3:51,1/9/21 3:53,IP Address,187.190.91.9,100,81,TRUE,1/9/21 3:53,R_3JdUQj4HxeudGqh,,,,,24.54800415,-107.4003983,anonymous,EN,A lot,Very demanding,4 problems,"I put one ""turn left"" more than it was needed, and I didn't have time to correct it.",I have programmed before.,2,2,2,1,3,1,,5b80b3ba16aa4400016a75ef
+1/9/21 3:52,1/9/21 3:53,IP Address,5.81.200.239,100,59,TRUE,1/9/21 3:53,R_2Em0XVTHgd6Ot3j,,,,,52.67199707,-1.343795776,anonymous,EN,A lot,Moderately demanding,4 problems,completing irregular patterns,I have never programmed before.,,,,,,,,5fc3df4c86fa277559d373c2
+1/9/21 3:53,1/9/21 3:53,IP Address,93.190.37.99,100,34,TRUE,1/9/21 3:53,R_3fdthgOcvmfpR9y,,,,,51.96000671,20.15220642,anonymous,EN,A great deal,Moderately demanding,All 5 problems,,I have never programmed before.,,,,,,,,5f248b7b1bde03086270bd37
+1/9/21 3:53,1/9/21 3:54,IP Address,151.55.150.28,100,64,TRUE,1/9/21 3:54,R_ex7eOeMc0qnkVZT,,,,,45.66279602,9.62890625,anonymous,EN,A lot,Slightly demanding,All 5 problems,,I have programmed before.,2,3,3,1,1,2,,5f043ab655b1f267b94176b4
+1/9/21 3:54,1/9/21 3:55,IP Address,80.47.150.86,100,50,TRUE,1/9/21 3:55,R_XMlTMVbM5A5USu5,,,,,53.75,-2.729507446,anonymous,EN,A moderate amount,Slightly demanding,All 5 problems,,I have never programmed before.,,,,,,,,5f4bdd0445dcf109c307b90d
+1/9/21 3:52,1/9/21 3:55,IP Address,83.25.145.89,100,202,TRUE,1/9/21 3:55,R_a97YBePIBDaWwfv,,,,,53.12590027,18.00570679,anonymous,EN,A great deal,Moderately demanding,4 problems,"I have failed to optimize the commands in the last problem, so they weren't working when the number of stones or moves in line was getting shorter",I have programmed before.,1 (Very inexperienced),1,1,1,1,2,,5fc0c541c266bd597b286e98
+1/9/21 3:55,1/9/21 3:57,IP Address,85.221.145.32,100,94,TRUE,1/9/21 3:57,R_Wpaqxe0FiiN8ef7,,,,,52.40519714,16.93389893,anonymous,EN,A lot,Moderately demanding,All 5 problems,I have solved all 5 problems.,I have programmed before.,2,2,1,1,1,3,"The activity was fun, thank you!",5de631043cf27959fe70269c
+1/9/21 3:56,1/9/21 3:57,IP Address,81.99.11.126,100,45,TRUE,1/9/21 3:57,R_D2EVLxFOVQoTDX3,,,,,51.58929443,-2.993103027,anonymous,EN,A great deal,Slightly demanding,All 5 problems,,I have programmed before.,3,4 or more,1,2,3,1,,5ed1717c9654ab0b17be2ceb
+1/9/21 3:56,1/9/21 3:57,IP Address,217.173.180.236,100,100,TRUE,1/9/21 3:57,R_1mK18LIelnIwrwN,,,,,53.01759338,18.62019348,anonymous,EN,A great deal,Moderately demanding,4 problems,I almost solved 5. I managed to get the last one but i ran out of time and turtle couldnt get to the point in time,I have programmed before.,2,1,2,1,1,2,,5fa2be9d820efd4e33eee9fc
+1/9/21 3:59,1/9/21 3:59,IP Address,2.222.36.18,100,37,TRUE,1/9/21 3:59,R_2tieJXj7MSlTVDO,,,,,52.42140198,-1.567398071,anonymous,EN,A great deal,Very demanding,All 5 problems,,I have never programmed before.,,,,,,,,5fc8d1b43e9eb32a22d4da4d
+1/9/21 3:56,1/9/21 4:00,IP Address,88.89.89.149,100,220,TRUE,1/9/21 4:00,R_1GDJmg9FJMtM41M,,,,,66.50790405,13.01269531,anonymous,EN,A great deal,Moderately demanding,4 problems,The last one i struggled with not because it was hard to understand how to do it but because without any experience in programming i had to try over a lot of times because the turtle got stuck. I think it was correct at the last try but the turtle didn't get all the way before the time ran out,I have never programmed before.,,,,,,,,5f9bdffe42555942fbc9ca49
+1/9/21 4:02,1/9/21 4:03,IP Address,178.43.212.16,100,54,TRUE,1/9/21 4:03,R_2QS5jQsRdWnA6LH,,,,,51.10440063,17.01449585,anonymous,EN,A great deal,Moderately demanding,2 problems,,I have never programmed before.,,,,,,,,5b914a5f02a76000015c72d4
+1/9/21 4:03,1/9/21 4:06,IP Address,46.177.125.53,100,151,TRUE,1/9/21 4:06,R_2rr2UDjiythn1Kt,,,,,37.98420715,23.73530579,anonymous,EN,A lot,Very demanding,3 problems,I was confused with the repetive commants,I have never programmed before.,,,,,,,Overall it was a nice experience but as I have never programmed before it saw a little bit confusing on builting new commants or repetitive. Maybe a little more explanation to this would be helpful.,5eedb69308f7161ee954279d
+1/9/21 4:05,1/9/21 4:06,IP Address,176.92.52.24,100,75,TRUE,1/9/21 4:06,R_2CJ3XkdmnX96vN0,,,,,37.98420715,23.73530579,anonymous,EN,A great deal,Not demanding at all,All 5 problems,,I have programmed before.,3,2,3,1,4,1,,5dd5105a82569a4c04723f7e
+1/9/21 4:05,1/9/21 4:09,IP Address,86.178.94.117,100,220,TRUE,1/9/21 4:09,R_1JJkKOtp7Myx6PD,,,,,51.52679443,-0.18699646,anonymous,EN,A great deal,Extremely demanding,3 problems,"I couldn't figure out how best to utilise the 'repeat' command for one task, and made a small error close to the end of completing the final task which made me run out of time.",I have never programmed before.,,,,,,,I really enjoyed this study and it has made me think more about programming.,5ec970f3e657d60c8e4db3a4
+1/9/21 4:09,1/9/21 4:10,IP Address,85.136.129.73,100,81,TRUE,1/9/21 4:10,R_cvBY14jQpC0TmGB,,,,,37.76919556,-3.790298462,anonymous,EN,A great deal,Moderately demanding,4 problems,The animation takes so much time ,I have programmed before.,1 (Very inexperienced),1,1,1,1,1,,5e444fa46bcdba04dcf2d695
+1/9/21 4:10,1/9/21 4:13,IP Address,79.54.161.174,100,163,TRUE,1/9/21 4:13,R_2fg2uqLy1fiY13U,,,,,45.46429443,9.189498901,anonymous,EN,A moderate amount,Moderately demanding,2 problems,"
+I didn't know how to go on, and even if I managed to complete the figure I didn't do it in the required way, I would have liked more time for some of them",I have never programmed before.,,,,,,,N\A,5fdde74bfdb6e64c26da591a
+1/9/21 4:22,1/9/21 4:24,IP Address,91.223.64.51,100,143,TRUE,1/9/21 4:24,R_3fpZmeEuPy4hye7,,,,,50.02130127,22.06700134,anonymous,EN,A lot,Moderately demanding,4 problems,It took me too long to understand my mistakes that I've been doing the whole time.,I have never programmed before.,,,,,,,,5f2ab8c4c46fc63609d8eedb
+1/9/21 4:31,1/9/21 4:34,IP Address,178.235.185.156,100,153,TRUE,1/9/21 4:34,R_OlPuPaozPwcl4gF,,,,,51.40620422,21.14030457,anonymous,EN,A great deal,Moderately demanding,1 problem,too little time,I have never programmed before.,,,,,,,no,5bc2e0ec4f3bfd00012e97b5
+1/9/21 4:51,1/9/21 4:52,IP Address,86.0.250.208,100,94,TRUE,1/9/21 4:52,R_3FVbjfJvCQhfa63,,,,,52.60490417,-1.148803711,anonymous,EN,A lot,Very demanding,3 problems,little bit of a confusion about how  to go about the algorithm,I have programmed before.,1 (Very inexperienced),3,4,3,1,2,,5daec370e4688e00142ca236
+1/9/21 5:43,1/9/21 5:45,IP Address,89.151.36.184,100,85,TRUE,1/9/21 5:45,R_27pbXhRGgL9RYSL,,,,,51.10429382,17.03349304,anonymous,EN,A lot,Very demanding,1 problem,Not enough time to do the 5th one for me. I ran into a problem and the turtle was too slow in debug mode. Couldn't make any substantial changes. Also it didn't show which line of code was wrong.,I have programmed before.,2,0,1,1,2,1,,5eb8630fb9a7c17ac8c7d14b
+1/10/21 2:41,1/10/21 2:49,IP Address,176.157.65.111,100,495,TRUE,1/10/21 2:49,R_SDXG9QO4X0yEv5v,,,,,43.6065979,5.755905151,anonymous,EN,A lot,Moderately demanding,3 problems,"I spent too much time running each programme several times as I was creating it, because I needed help visualising the results",I have never programmed before.,,,,,,,,5c7fb04093cdce00160adf49
+1/10/21 2:51,1/10/21 2:55,IP Address,176.157.65.111,100,239,TRUE,1/10/21 2:55,R_2107ERKhhWqyWxk,,,,,43.6065979,5.755905151,anonymous,EN,A lot,Moderately demanding,3 problems,For the 4th problem I had trouble figuring out how to create efficient new commands. I completed the 5th one but still ran out of time as I did not take into account the time needed to check if the programme worked (I ran out of time in the middle of running the programme).,I have never programmed before.,,,,,,,,5cfd119645e1a20001883ee6

@@ -1,0 +1,6 @@
+,userId,item,actions,attempts,success,time_success,time_first,timedout,examples
+790,5eb8630fb9a7c17ac8c7d14b,Basic Commands,0,0,False,0.0,0.0,False,False
+791,5eb8630fb9a7c17ac8c7d14b,Function,0,0,False,0.0,0.0,False,False
+792,5eb8630fb9a7c17ac8c7d14b,Repeat,0,0,False,0.0,0.0,False,False
+793,5eb8630fb9a7c17ac8c7d14b,Combine,0,0,False,0.0,0.0,False,False
+794,5eb8630fb9a7c17ac8c7d14b,Challenge,0,0,False,0.0,0.0,False,False

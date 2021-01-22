@@ -6,11 +6,10 @@ import dash_html_components as html
 import dash_core_components as dcc
 from dash.dependencies import Input, Output
 
-from .data import CreateDataFrame #changed from create_dataframe
 from .layout import html_layout
 import plotly.express as px
 import datetime, time
-from .filemanager import FirestoreListener, CreateTable, IndexFlattener, DataBars, MaxValueTableStyler
+from .filemanager import FirestoreListener, ResultsDataMaker
 from google.cloud import firestore
 from collections import Counter
 
@@ -30,9 +29,10 @@ class Table(dbb.Block):
     '''
     def layout(self):
         return html.Div([
-                html.H1("Table on metric: {}".format(self.data.name), style={'padding-bottom':'10px', 'color':'rgba(46, 49, 49, 1)'}),
+                html.H1("{}".format(self.data.name), style={'padding-bottom':'10px', 'color':'rgba(46, 49, 49, 1)'}),
+                dcc.Dropdown(id=self.register('dropdown-menu'), options = self.data.options, placeholder='Select...'),
                 dash_table.DataTable(
-                    id=self.register('data-table'), #self register free us from creating global table names like 'data-table-{}'.format(self.data.name)
+                    id=self.register('data-table'), #self register == global table names like 'data-table-{}'.format(self.data.name)
                     filter_action="native",
                     sort_action="native",
                     sort_mode="multi",
@@ -53,24 +53,38 @@ class Table(dbb.Block):
                 )
         ])
 
-    def callbacks(self, intermediate_input):
+    def callbacks(self, intermediate_input, time_interval):
         @self.app.callback(
             [
                 self.output('data-table', 'data'),
                 self.output('data-table', 'columns')
             ],
-            [intermediate_input]
+            [intermediate_input, time_interval]
         )
-        def update_table(dfs):
+        def update_table(data_list, time_interval):
+            columns = [{"name": i, "id": i} for i in ['userId','sessionId', 'item', 'actions', 'attempts', 'success', 'time_success',
+       'time_first', 'timedout', 'examples']]
 
-            if dfs is None:
-                return dash.no_update
-            else:
-                datasets = json.loads(dfs)
+            print("data", data_list)
 
-                df = pd.read_json(datasets[self.data.name], orient='split')
+            return data_list, columns
+            # try:
+            #     df = pd.DataFrame(data_list,
+            #                       columns=['userId', 'sessionId',
+            #                                'item', 'actions',
+            #                                'attempts', 'success',
+            #                                'time_success','time_first',
+            #                                'timedout','examples'])
+            #
+            #     data = df.to_dict('records')
+            #     columns = [{"name": i, "id": i, "selectable": True} for i in df.columns]
+            #     # print("dropdown col is {}".format(self.data.dropdown_col))
+            #     print("Data length is {}".format(len(data)))
+            #     return data, columns
+            #
+            # except ValueError as e:
+            #     print(e)
+            #     return dash.no_update
 
-                data = df.to_dict('records')
-                columns = [{"name": i, "id": i, "selectable": True} for i in df.columns]
 
-            return data, columns
+# try with one table identical but not defined through dbb

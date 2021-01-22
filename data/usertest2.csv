@@ -1,0 +1,6 @@
+,userId,item,actions,attempts,success,time_success,time_first,timedout,examples
+740,5cfd119645e1a20001883ee6,Basic Commands,102,12,True,115.307,0.0,False,False
+741,5cfd119645e1a20001883ee6,Function,27,0,True,118.294,0.0,False,True
+742,5cfd119645e1a20001883ee6,Repeat,501,24,False,0.0,0.0,True,False
+743,5cfd119645e1a20001883ee6,Combine,135,9,True,238.341,0.0,False,False
+744,5cfd119645e1a20001883ee6,Challenge,564,15,False,0.0,0.0,False,True

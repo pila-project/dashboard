@@ -1,0 +1,287 @@
+,sessionId,userId,item,n_actions,n_attempts,success,first_time,success_time,opened_example,timedout
+0,Other,bachbumbeng,Basic Commands,1335.0,60.0,True,00:00,00:18,True,True
+1,Other,bachbumbeng,Function,1695.0,0.0,True,00:00,00:13,True,True
+2,Other,bachbumbeng,Repeat,5190.0,15.0,True,00:00,00:31,True,True
+3,Other,bachbumbeng,Combine,555.0,0.0,True,00:00,02:08,True,False
+4,Other,bachbumbeng,Challenge,1530.0,0.0,True,00:00,09:09,True,False
+5,Other,test,Basic Commands,150.0,0.0,True,00:00,00:38,True,False
+6,Other,test,Function,120.0,0.0,True,00:00,00:30,False,False
+7,Other,test,Repeat,0.0,0.0,False,00:00,00:00,False,False
+8,Other,pietro,Basic Commands,165.0,15.0,True,00:00,01:30,False,False
+9,Other,pietro,Function,255.0,0.0,True,00:00,02:46,False,False
+10,Other,pietro,Repeat,840.0,0.0,True,00:00,04:41,False,False
+11,Other,pietro,Combine,1050.0,15.0,True,00:00,08:26,False,False
+12,Other,pietro,Challenge,1500.0,0.0,False,00:00,00:00,True,False
+13,Other,badabum,Basic Commands,120.0,15.0,True,00:00,00:26,True,True
+14,Other,bach,Basic Commands,120.0,0.0,True,00:00,00:18,False,False
+15,Other,test2812v2,Basic Commands,285.0,0.0,True,00:00,00:35,False,False
+16,Other,badabun,Basic Commands,0.0,0.0,False,00:00,00:00,True,True
+17,Other,badabum,Function,150.0,0.0,False,00:00,00:00,True,False
+18,Other,badabum,Repeat,60.0,0.0,False,00:00,00:00,True,True
+19,Other,badabum,Combine,0.0,0.0,False,00:00,00:00,False,False
+20,Other,badabum,Challenge,0.0,0.0,False,00:00,00:00,False,False
+21,Other,6fe480b2-3373-453f-a0f0-158fd6488325,Basic Commands,90.0,0.0,True,00:00,08:26,False,True
+22,Other,6fe480b2-3373-453f-a0f0-158fd6488325,Function,15.0,0.0,False,00:00,00:00,False,False
+23,Other,6fe480b2-3373-453f-a0f0-158fd6488325,Repeat,0.0,0.0,False,00:00,00:00,False,False
+24,Other,6fe480b2-3373-453f-a0f0-158fd6488325,Combine,0.0,0.0,False,00:00,00:00,False,False
+25,Other,6fe480b2-3373-453f-a0f0-158fd6488325,Challenge,0.0,0.0,False,00:00,00:00,False,False
+26,Other,bf87b04d-44e0-4b95-8a58-9b82dcc7cac3,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+27,Other,bf87b04d-44e0-4b95-8a58-9b82dcc7cac3,Function,15.0,0.0,False,00:00,00:00,False,False
+28,Other,bf87b04d-44e0-4b95-8a58-9b82dcc7cac3,Repeat,0.0,0.0,False,00:00,00:00,False,False
+29,Other,bf87b04d-44e0-4b95-8a58-9b82dcc7cac3,Combine,0.0,0.0,False,00:00,00:00,False,False
+30,Other,bf87b04d-44e0-4b95-8a58-9b82dcc7cac3,Challenge,0.0,0.0,False,00:00,00:00,False,True
+31,Other,6d82ef11-1627-4c55-a55f-b6d3bd44aeda,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+32,Other,6d82ef11-1627-4c55-a55f-b6d3bd44aeda,Function,15.0,0.0,False,00:00,00:00,False,False
+33,Other,6d82ef11-1627-4c55-a55f-b6d3bd44aeda,Repeat,0.0,0.0,False,00:00,00:00,False,False
+34,Other,6d82ef11-1627-4c55-a55f-b6d3bd44aeda,Combine,0.0,0.0,False,00:00,00:00,False,False
+35,Other,6d82ef11-1627-4c55-a55f-b6d3bd44aeda,Challenge,0.0,0.0,False,00:00,00:00,False,False
+36,Other,mario2,Combine,0.0,0.0,False,56:15,00:00,False,True
+37,Other,mario2,Repeat,375.0,0.0,True,00:00,01:42,False,False
+38,Other,mario2,Challenge,1485.0,0.0,True,00:00,08:39,False,False
+39,Other,test0401,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+40,Other,test0401,Function,15.0,0.0,False,00:00,00:00,False,False
+41,Other,test0401,Repeat,0.0,0.0,False,00:00,00:00,False,False
+42,Other,test0401,Combine,0.0,0.0,False,00:00,00:00,False,False
+43,Other,test0401,Challenge,0.0,0.0,False,00:00,00:00,False,False
+44,Other,waseliwas,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+45,Other,waseliwas,Function,30.0,0.0,False,00:00,00:00,False,False
+46,Other,waseliwas,Repeat,0.0,0.0,False,00:00,00:00,False,False
+47,Other,waseliwas,Combine,0.0,0.0,False,00:00,00:00,False,False
+48,Other,waseliwas,Challenge,0.0,0.0,False,00:00,00:00,False,False
+49,Other,2bb6971a-663e-4d68-a5e4-2b440468d3f1,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+50,Other,5e9b725d85157c0816f1f0dd,Basic Commands,180.0,0.0,True,00:00,00:20,False,False
+51,Other,5f908c63832d32168d6d8f31,Basic Commands,960.0,90.0,True,00:00,01:55,False,False
+52,Other,5e9b725d85157c0816f1f0dd,Function,240.0,0.0,True,00:00,00:52,False,False
+53,Other,5e9b725d85157c0816f1f0dd,Repeat,1035.0,45.0,True,00:00,03:23,False,False
+54,Other,5f908c63832d32168d6d8f31,Function,1275.0,0.0,True,00:00,05:04,False,False
+55,Other,5d4957bc034616000180b907,Basic Commands,345.0,0.0,True,00:00,01:08,False,False
+56,Other,5fe8d26e88f0577d2608884f,Basic Commands,240.0,0.0,True,00:00,00:46,False,False
+57,Other,5fe8d26e88f0577d2608884f,Function,150.0,0.0,True,00:00,01:15,False,False
+58,Other,5d4957bc034616000180b907,Function,90.0,0.0,True,00:00,01:39,False,False
+59,Other,5fe8d26e88f0577d2608884f,Repeat,1665.0,15.0,True,00:00,05:20,False,False
+60,Other,5d78647e4dadc9001a3e34dd,Basic Commands,450.0,15.0,True,00:00,01:46,False,False
+61,Other,5e9b725d85157c0816f1f0dd,Combine,855.0,0.0,True,00:00,01:28,False,False
+62,Other,5d4957bc034616000180b907,Repeat,345.0,45.0,True,00:00,03:24,False,False
+63,Other,5e9b725d85157c0816f1f0dd,Challenge,2430.0,0.0,False,00:00,00:00,True,True
+64,Other,5d78647e4dadc9001a3e34dd,Function,210.0,0.0,True,00:00,00:24,False,False
+65,Other,5d78647e4dadc9001a3e34dd,Repeat,750.0,15.0,True,00:00,03:28,False,False
+66,Other,5f908c63832d32168d6d8f31,Repeat,1545.0,75.0,False,00:00,00:00,True,True
+67,Other,5d4957bc034616000180b907,Combine,435.0,15.0,True,00:00,02:15,False,False
+68,Other,5fe8d26e88f0577d2608884f,Combine,1305.0,0.0,True,00:00,02:57,False,False
+69,Other,5d78647e4dadc9001a3e34dd,Combine,600.0,30.0,True,00:00,03:39,False,False
+70,Other,5d4957bc034616000180b907,Challenge,2490.0,30.0,True,00:00,10:12,False,False
+71,Other,5fe8d26e88f0577d2608884f,Challenge,3570.0,0.0,True,00:00,09:37,False,False
+72,Other,5d78647e4dadc9001a3e34dd,Challenge,930.0,30.0,False,00:00,00:00,False,True
+73,Other,5f908c63832d32168d6d8f31,Combine,1560.0,0.0,False,00:00,00:00,False,False
+74,Other,5fe7673ee14422582703e754,Basic Commands,660.0,105.0,True,00:00,02:22,True,False
+75,Other,5fe7673ee14422582703e754,Function,210.0,0.0,True,00:00,01:24,False,False
+76,Other,5fe7673ee14422582703e754,Repeat,1155.0,165.0,True,00:00,05:58,False,False
+77,Other,5fe7673ee14422582703e754,Combine,2010.0,45.0,False,00:00,00:00,True,True
+78,Other,5fe7673ee14422582703e754,Challenge,555.0,0.0,False,00:00,00:00,True,True
+79,Other,chidera933,Basic Commands,105.0,0.0,True,00:00,00:23,False,False
+80,Other,chidera933,Function,165.0,0.0,True,00:00,00:43,False,False
+81,Other,chidera933,Repeat,855.0,15.0,True,00:00,03:22,False,False
+82,Other,chidera933,Combine,0.0,0.0,False,00:00,00:00,False,True
+83,Other,chidera933,Challenge,0.0,0.0,False,00:00,00:00,False,True
+84,Other,test0701,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+85,Other,bf15a82f-0abc-4315-b134-8e96714213cb,Basic Commands,240.0,0.0,False,00:00,00:00,False,True
+86,Other,bf15a82f-0abc-4315-b134-8e96714213cb,Function,405.0,0.0,False,00:00,00:00,False,True
+87,Other,368a7dbe-f68e-4ed7-845b-4aa3d86bfb06,Basic Commands,165.0,0.0,False,00:00,00:00,False,True
+88,Other,368a7dbe-f68e-4ed7-845b-4aa3d86bfb06,Function,135.0,0.0,False,00:00,00:00,False,True
+89,Other,368a7dbe-f68e-4ed7-845b-4aa3d86bfb06,Repeat,135.0,0.0,False,00:00,00:00,False,True
+90,Other,368a7dbe-f68e-4ed7-845b-4aa3d86bfb06,Combine,180.0,0.0,False,00:00,00:00,True,True
+91,Other,3389c152-52fb-43f5-9589-7634bd5255e1,Basic Commands,90.0,0.0,False,00:00,00:00,False,False
+92,Other,fab44415-4ddb-41ef-b097-f8e5e38b8fb5,Basic Commands,0.0,0.0,False,00:00,00:00,False,True
+93,Other,fab44415-4ddb-41ef-b097-f8e5e38b8fb5,Function,15.0,0.0,False,00:00,00:00,False,False
+94,Other,fab44415-4ddb-41ef-b097-f8e5e38b8fb5,Repeat,0.0,0.0,False,00:00,00:00,False,False
+95,Other,fab44415-4ddb-41ef-b097-f8e5e38b8fb5,Combine,0.0,0.0,False,00:00,00:00,False,False
+96,Other,fab44415-4ddb-41ef-b097-f8e5e38b8fb5,Challenge,0.0,0.0,False,00:00,00:00,False,True
+97,Other,72319cf4-02c6-42d3-8a2f-0f681a52d729,Basic Commands,120.0,0.0,True,00:00,00:31,False,False
+98,Other,72319cf4-02c6-42d3-8a2f-0f681a52d729,Function,120.0,0.0,True,00:00,00:15,False,False
+99,Other,72319cf4-02c6-42d3-8a2f-0f681a52d729,Repeat,405.0,0.0,True,00:00,03:28,True,False
+100,Other,72319cf4-02c6-42d3-8a2f-0f681a52d729,Combine,1140.0,15.0,True,00:00,06:15,False,False
+101,Other,17fb3110-c7b3-4617-b745-d5b0188af829,Basic Commands,0.0,0.0,False,00:00,00:00,False,False
+102,Other,17fb3110-c7b3-4617-b745-d5b0188af829,Function,15.0,0.0,False,00:00,00:00,False,False
+103,Other,17fb3110-c7b3-4617-b745-d5b0188af829,Repeat,0.0,0.0,False,00:00,00:00,False,False
+104,Other,17fb3110-c7b3-4617-b745-d5b0188af829,Combine,0.0,0.0,False,00:00,00:00,False,False
+105,Other,17fb3110-c7b3-4617-b745-d5b0188af829,Challenge,0.0,0.0,False,00:00,00:00,False,False
+106,Other,72319cf4-02c6-42d3-8a2f-0f681a52d729,Challenge,45.0,0.0,False,00:00,00:00,True,False
+107,Other,testthis,Basic Commands,75.0,15.0,False,00:00,00:00,True,False
+108,Other,171d06ba-d8da-45f5-8772-9ec1a2d48cc5,Basic Commands,0.0,0.0,False,00:00,00:00,True,False
+109,Other,171d06ba-d8da-45f5-8772-9ec1a2d48cc5,Function,30.0,0.0,False,00:00,00:00,True,False
+110,Other,171d06ba-d8da-45f5-8772-9ec1a2d48cc5,Repeat,60.0,0.0,False,00:00,00:00,True,False
+111,Other,171d06ba-d8da-45f5-8772-9ec1a2d48cc5,Combine,15.0,0.0,False,00:00,00:00,True,False
+112,Other,171d06ba-d8da-45f5-8772-9ec1a2d48cc5,Challenge,45.0,0.0,False,00:00,00:00,True,False
+113,Other,7e3e4436-27ed-4029-8c9c-1e0c0ef57dfe,Basic Commands,60.0,0.0,False,00:00,00:00,True,False
+114,Prolific Jan2021,5d694784be10f9001511d7a3,Basic Commands,375.0,15.0,True,00:00,00:44,False,False
+115,Prolific Jan2021,5d694784be10f9001511d7a3,Function,120.0,0.0,True,00:00,00:54,False,False
+116,Prolific Jan2021,5d694784be10f9001511d7a3,Repeat,1080.0,45.0,True,00:00,04:00,False,False
+117,Prolific Jan2021,5ca8c84e92fdc200129e9db3,Basic Commands,315.0,105.0,True,00:00,01:39,False,False
+118,Prolific Jan2021,5ca8c84e92fdc200129e9db3,Function,600.0,0.0,False,00:00,00:00,True,False
+119,Prolific Jan2021,5f512f610a752a32cf96d74f,Basic Commands,675.0,45.0,True,00:00,02:19,False,False
+120,Prolific Jan2021,5d694784be10f9001511d7a3,Combine,480.0,0.0,True,00:00,02:35,False,False
+121,Prolific Jan2021,5e4c214a69cc03000caf6259,Basic Commands,120.0,0.0,True,00:00,00:22,False,False
+122,Prolific Jan2021,5e4c214a69cc03000caf6259,Function,180.0,0.0,True,00:00,01:40,False,False
+123,Prolific Jan2021,5f512f610a752a32cf96d74f,Function,780.0,0.0,False,00:00,00:00,False,True
+124,Prolific Jan2021,5e4c214a69cc03000caf6259,Repeat,435.0,0.0,True,00:00,02:49,False,False
+125,Prolific Jan2021,5d694784be10f9001511d7a3,Challenge,4500.0,30.0,True,00:00,14:11,False,False
+126,Prolific Jan2021,5e4c214a69cc03000caf6259,Combine,495.0,0.0,True,00:00,02:18,False,False
+127,Prolific Jan2021,5f512f610a752a32cf96d74f,Repeat,1935.0,150.0,True,00:00,13:49,True,False
+128,Prolific Jan2021,5e4c214a69cc03000caf6259,Challenge,10500.0,210.0,True,00:00,28:56,False,False
+129,Prolific Jan2021,5f512f610a752a32cf96d74f,Combine,825.0,30.0,True,00:00,04:36,False,False
+130,Prolific Jan2021,5f512f610a752a32cf96d74f,Challenge,4815.0,30.0,True,00:00,15:07,False,False
+131,Prolific Jan2021,5eda126ec6a418029cb19e91,Basic Commands,90.0,0.0,True,00:00,00:30,False,False
+132,Prolific Jan2021,5eda126ec6a418029cb19e91,Function,495.0,0.0,True,00:00,02:05,True,False
+133,Prolific Jan2021,5eda126ec6a418029cb19e91,Repeat,1080.0,30.0,True,00:00,03:36,True,False
+134,Prolific Jan2021,5eda126ec6a418029cb19e91,Combine,0.0,0.0,False,00:00,00:00,False,True
+135,Prolific Jan2021,5eda126ec6a418029cb19e91,Challenge,3420.0,0.0,False,00:00,00:00,True,False
+136,Prolific Jan2021,5c44ad201ddd660001ca00b0,Basic Commands,150.0,0.0,True,00:00,00:19,False,False
+137,Prolific Jan2021,5ed1717c9654ab0b17be2ceb,Basic Commands,390.0,30.0,True,00:00,01:16,False,False
+138,Prolific Jan2021,5c44ad201ddd660001ca00b0,Function,120.0,0.0,True,00:00,00:22,False,False
+139,Prolific Jan2021,5f043ab655b1f267b94176b4,Basic Commands,255.0,15.0,True,00:00,00:37,False,False
+140,Prolific Jan2021,5fc8d1b43e9eb32a22d4da4d,Basic Commands,270.0,0.0,True,00:00,01:18,True,False
+141,Prolific Jan2021,5fc3df4c86fa277559d373c2,Basic Commands,300.0,0.0,True,00:00,00:54,False,False
+142,Prolific Jan2021,5c44ad201ddd660001ca00b0,Repeat,645.0,0.0,True,00:00,02:46,True,False
+143,Prolific Jan2021,5f4bdd0445dcf109c307b90d,Basic Commands,90.0,15.0,True,00:00,00:36,False,False
+144,Prolific Jan2021,5f248b7b1bde03086270bd37,Basic Commands,285.0,0.0,True,00:00,00:37,False,False
+145,Prolific Jan2021,5c102d91e32f860001651a93,Basic Commands,255.0,0.0,True,00:00,00:34,False,False
+146,Prolific Jan2021,5f043ab655b1f267b94176b4,Function,90.0,0.0,True,00:00,00:37,False,False
+147,Prolific Jan2021,5ec970f3e657d60c8e4db3a4,Basic Commands,555.0,45.0,True,00:00,03:09,False,False
+148,Prolific Jan2021,5ed1717c9654ab0b17be2ceb,Function,255.0,0.0,True,00:00,01:22,True,False
+149,Prolific Jan2021,5c28efb626e55d0001a685b1,Basic Commands,90.0,0.0,True,00:00,00:38,False,False
+150,Prolific Jan2021,5f4bdd0445dcf109c307b90d,Function,105.0,0.0,True,00:00,01:00,False,False
+151,Prolific Jan2021,5fc3df4c86fa277559d373c2,Function,60.0,0.0,True,00:00,00:49,False,False
+152,Prolific Jan2021,5cfd119645e1a20001883ee6,Basic Commands,510.0,60.0,True,00:00,01:55,False,False
+153,Prolific Jan2021,5f248b7b1bde03086270bd37,Function,150.0,0.0,True,00:00,00:52,False,False
+154,Prolific Jan2021,5c102d91e32f860001651a93,Function,90.0,0.0,True,00:00,00:29,False,False
+155,Prolific Jan2021,5fc0c541c266bd597b286e98,Basic Commands,465.0,15.0,True,00:00,00:38,False,False
+156,Prolific Jan2021,5fc8d1b43e9eb32a22d4da4d,Function,345.0,0.0,True,00:00,01:57,True,False
+157,Prolific Jan2021,5f043ab655b1f267b94176b4,Repeat,480.0,0.0,True,00:00,03:13,False,False
+158,Prolific Jan2021,5dde8068332b34dd9047e51b,Basic Commands,180.0,0.0,True,00:00,00:48,False,False
+159,Prolific Jan2021,5fa2be9d820efd4e33eee9fc,Basic Commands,150.0,0.0,True,00:00,00:33,False,False
+160,Prolific Jan2021,5c28efb626e55d0001a685b1,Function,945.0,0.0,True,00:00,03:05,True,False
+161,Prolific Jan2021,5eedb69308f7161ee954279d,Basic Commands,255.0,0.0,True,00:00,01:17,False,False
+162,Prolific Jan2021,5c102d91e32f860001651a93,Repeat,195.0,0.0,True,00:00,01:32,False,False
+163,Prolific Jan2021,5c7fb04093cdce00160adf49,Basic Commands,180.0,15.0,True,00:00,00:51,False,False
+164,Prolific Jan2021,5fc3df4c86fa277559d373c2,Repeat,420.0,30.0,True,00:00,03:46,False,False
+165,Prolific Jan2021,5b80b3ba16aa4400016a75ef,Basic Commands,120.0,0.0,True,00:00,00:49,True,False
+166,Prolific Jan2021,5fc0c541c266bd597b286e98,Function,60.0,0.0,True,00:00,00:53,False,False
+167,Prolific Jan2021,5f248b7b1bde03086270bd37,Repeat,750.0,0.0,True,00:00,04:24,True,False
+168,Prolific Jan2021,5f4bdd0445dcf109c307b90d,Repeat,1095.0,30.0,True,00:00,04:01,False,False
+169,Prolific Jan2021,5fdde74bfdb6e64c26da591a,Basic Commands,810.0,75.0,True,00:00,02:08,False,False
+170,Prolific Jan2021,5fa2be9d820efd4e33eee9fc,Function,225.0,0.0,True,00:00,02:15,True,False
+171,Prolific Jan2021,5dde8068332b34dd9047e51b,Function,1110.0,0.0,False,00:00,00:00,True,False
+172,Prolific Jan2021,5ed1717c9654ab0b17be2ceb,Repeat,630.0,0.0,True,00:00,03:13,False,False
+173,Prolific Jan2021,5efb2cae4187a504713a4081,Basic Commands,120.0,30.0,True,00:00,01:03,False,False
+174,Prolific Jan2021,5c7fb04093cdce00160adf49,Function,600.0,0.0,True,00:00,02:52,True,False
+175,Prolific Jan2021,5b80b3ba16aa4400016a75ef,Function,135.0,0.0,True,00:00,00:47,False,False
+176,Prolific Jan2021,5f9bdffe42555942fbc9ca49,Basic Commands,120.0,15.0,True,00:00,00:32,False,False
+177,Prolific Jan2021,5cfd119645e1a20001883ee6,Function,135.0,0.0,True,00:00,01:58,True,False
+178,Prolific Jan2021,5fc0c541c266bd597b286e98,Repeat,480.0,60.0,True,00:00,02:21,False,False
+179,Prolific Jan2021,5c44ad201ddd660001ca00b0,Combine,1350.0,15.0,True,00:00,02:40,False,False
+180,Prolific Jan2021,5eedb69308f7161ee954279d,Function,555.0,0.0,True,00:00,04:51,True,False
+181,Prolific Jan2021,5fc8d1b43e9eb32a22d4da4d,Repeat,2820.0,60.0,True,00:00,07:20,True,False
+182,Prolific Jan2021,5c102d91e32f860001651a93,Combine,360.0,0.0,True,00:00,01:27,False,False
+183,Prolific Jan2021,5f9bdffe42555942fbc9ca49,Function,360.0,0.0,True,00:00,02:39,False,False
+184,Prolific Jan2021,5b80b3ba16aa4400016a75ef,Repeat,645.0,0.0,True,00:00,02:27,True,False
+185,Prolific Jan2021,5efb2cae4187a504713a4081,Function,120.0,0.0,True,00:00,00:34,False,False
+186,Prolific Jan2021,5ec970f3e657d60c8e4db3a4,Function,75.0,0.0,True,00:00,01:02,False,False
+187,Prolific Jan2021,5fdde74bfdb6e64c26da591a,Function,1845.0,0.0,False,00:00,00:00,True,True
+188,Prolific Jan2021,5efb2cae4187a504713a4081,Repeat,195.0,0.0,True,00:00,02:02,False,False
+189,Prolific Jan2021,5fa2be9d820efd4e33eee9fc,Repeat,780.0,15.0,True,00:00,03:50,False,False
+190,Prolific Jan2021,5f043ab655b1f267b94176b4,Combine,540.0,60.0,True,00:00,04:34,False,False
+191,Prolific Jan2021,5c28efb626e55d0001a685b1,Repeat,1665.0,45.0,False,00:00,00:00,True,False
+192,Prolific Jan2021,5c102d91e32f860001651a93,Challenge,7185.0,30.0,False,00:00,00:00,False,False
+193,Prolific Jan2021,5cfd119645e1a20001883ee6,Repeat,2505.0,120.0,False,00:00,00:00,False,True
+194,Prolific Jan2021,5ec970f3e657d60c8e4db3a4,Repeat,1305.0,75.0,False,00:00,00:00,False,True
+195,Prolific Jan2021,5fc0c541c266bd597b286e98,Combine,735.0,15.0,True,00:00,02:10,False,False
+196,Prolific Jan2021,5ed1717c9654ab0b17be2ceb,Combine,255.0,0.0,True,00:00,01:47,False,False
+197,Prolific Jan2021,5c7fb04093cdce00160adf49,Repeat,1785.0,240.0,True,00:00,08:19,True,False
+198,Prolific Jan2021,5fc3df4c86fa277559d373c2,Combine,645.0,15.0,True,00:00,02:17,False,False
+199,Prolific Jan2021,5c44ad201ddd660001ca00b0,Challenge,2760.0,0.0,True,00:00,06:41,False,False
+200,Prolific Jan2021,5f4bdd0445dcf109c307b90d,Combine,720.0,30.0,True,00:00,04:16,False,False
+201,Prolific Jan2021,5b80b3ba16aa4400016a75ef,Combine,465.0,0.0,True,00:00,01:19,False,False
+202,Prolific Jan2021,5f9bdffe42555942fbc9ca49,Repeat,1095.0,30.0,True,00:00,04:11,False,False
+203,Prolific Jan2021,5efb2cae4187a504713a4081,Combine,165.0,60.0,True,00:00,03:07,False,False
+204,Prolific Jan2021,5f248b7b1bde03086270bd37,Combine,2475.0,45.0,True,00:00,06:15,True,False
+205,Prolific Jan2021,5ed1717c9654ab0b17be2ceb,Challenge,5880.0,135.0,True,00:00,20:01,False,False
+206,Prolific Jan2021,5b80b3ba16aa4400016a75ef,Challenge,6450.0,60.0,False,00:00,00:00,True,False
+207,Prolific Jan2021,5fc0c541c266bd597b286e98,Challenge,4200.0,105.0,False,00:00,00:00,True,False
+208,Prolific Jan2021,5eedb69308f7161ee954279d,Repeat,1005.0,90.0,False,00:00,00:00,True,True
+209,Prolific Jan2021,5fc3df4c86fa277559d373c2,Challenge,2640.0,30.0,False,00:00,00:00,True,False
+210,Prolific Jan2021,5fa2be9d820efd4e33eee9fc,Combine,795.0,30.0,True,00:00,03:10,False,False
+211,Prolific Jan2021,5f043ab655b1f267b94176b4,Challenge,2685.0,120.0,True,00:00,14:37,False,False
+212,Prolific Jan2021,5efb2cae4187a504713a4081,Challenge,1680.0,0.0,False,00:00,00:00,True,False
+213,Prolific Jan2021,5de631043cf27959fe70269c,Basic Commands,180.0,15.0,True,00:00,00:34,False,False
+214,Prolific Jan2021,5de631043cf27959fe70269c,Function,60.0,0.0,True,00:00,00:38,False,False
+215,Prolific Jan2021,5b914a5f02a76000015c72d4,Basic Commands,240.0,0.0,True,00:00,01:45,False,False
+216,Prolific Jan2021,5f4bdd0445dcf109c307b90d,Challenge,2535.0,90.0,True,00:00,14:34,False,False
+217,Prolific Jan2021,5f9bdffe42555942fbc9ca49,Combine,120.0,0.0,True,00:00,01:40,False,False
+218,Prolific Jan2021,5fc8d1b43e9eb32a22d4da4d,Combine,1650.0,60.0,True,00:00,03:25,False,False
+219,Prolific Jan2021,5f2ab8c4c46fc63609d8eedb,Basic Commands,180.0,0.0,True,00:00,00:35,False,False
+220,Prolific Jan2021,5de631043cf27959fe70269c,Repeat,450.0,30.0,True,00:00,02:32,False,False
+221,Prolific Jan2021,5f2ab8c4c46fc63609d8eedb,Function,870.0,0.0,True,00:00,04:50,True,False
+222,Prolific Jan2021,5fa2be9d820efd4e33eee9fc,Challenge,4770.0,75.0,False,00:00,00:00,False,False
+223,Prolific Jan2021,5fdde74bfdb6e64c26da591a,Repeat,1875.0,15.0,False,00:00,00:00,True,True
+224,Prolific Jan2021,5f9bdffe42555942fbc9ca49,Challenge,4770.0,0.0,False,00:00,00:00,True,False
+225,Prolific Jan2021,5b914a5f02a76000015c72d4,Function,210.0,0.0,True,00:00,02:58,True,False
+226,Prolific Jan2021,5f248b7b1bde03086270bd37,Challenge,2310.0,45.0,True,00:00,10:57,False,False
+227,Prolific Jan2021,5ec970f3e657d60c8e4db3a4,Combine,2070.0,105.0,True,00:00,06:52,False,False
+228,Prolific Jan2021,5cfd119645e1a20001883ee6,Combine,675.0,45.0,True,00:00,03:58,False,False
+229,Prolific Jan2021,5de631043cf27959fe70269c,Combine,210.0,0.0,True,00:00,00:56,False,False
+230,Prolific Jan2021,5c7fb04093cdce00160adf49,Combine,345.0,105.0,True,00:00,07:05,True,False
+231,Prolific Jan2021,5fc8d1b43e9eb32a22d4da4d,Challenge,5520.0,180.0,True,00:00,14:59,False,False
+232,Prolific Jan2021,5de631043cf27959fe70269c,Challenge,1500.0,45.0,True,00:00,11:17,False,False
+233,Prolific Jan2021,5bc2e0ec4f3bfd00012e97b5,Basic Commands,105.0,45.0,True,00:00,01:17,False,False
+234,Prolific Jan2021,5b914a5f02a76000015c72d4,Repeat,1050.0,0.0,False,00:00,00:00,True,False
+235,Prolific Jan2021,5e444fa46bcdba04dcf2d695,Basic Commands,195.0,0.0,True,00:00,00:53,False,False
+236,Prolific Jan2021,5eedb69308f7161ee954279d,Combine,495.0,0.0,True,00:00,03:22,False,False
+237,Prolific Jan2021,5bc2e0ec4f3bfd00012e97b5,Function,945.0,0.0,False,00:00,00:00,False,True
+238,Prolific Jan2021,5e444fa46bcdba04dcf2d695,Function,150.0,0.0,True,00:00,01:11,False,False
+239,Prolific Jan2021,5dd5105a82569a4c04723f7e,Basic Commands,225.0,0.0,True,00:00,00:29,False,False
+240,Prolific Jan2021,5cfd119645e1a20001883ee6,Challenge,2820.0,75.0,False,00:00,00:00,True,False
+241,Prolific Jan2021,5dd5105a82569a4c04723f7e,Function,135.0,0.0,True,00:00,00:52,True,False
+242,Prolific Jan2021,5e444fa46bcdba04dcf2d695,Repeat,585.0,75.0,True,00:00,04:21,False,False
+243,Prolific Jan2021,5dd5105a82569a4c04723f7e,Repeat,1935.0,45.0,True,00:00,03:56,False,False
+244,Prolific Jan2021,5eedb69308f7161ee954279d,Challenge,1215.0,0.0,False,00:00,00:00,False,False
+245,Prolific Jan2021,5fdde74bfdb6e64c26da591a,Combine,615.0,120.0,True,00:00,04:48,True,False
+246,Prolific Jan2021,5f2ab8c4c46fc63609d8eedb,Repeat,1425.0,15.0,True,00:00,08:17,True,False
+247,Prolific Jan2021,5ec970f3e657d60c8e4db3a4,Challenge,3285.0,45.0,False,00:00,00:00,False,False
+248,Prolific Jan2021,5c7fb04093cdce00160adf49,Challenge,1785.0,135.0,True,00:00,16:47,True,False
+249,Prolific Jan2021,5e444fa46bcdba04dcf2d695,Combine,450.0,15.0,True,00:00,02:27,False,False
+250,Prolific Jan2021,5dd5105a82569a4c04723f7e,Combine,165.0,15.0,True,00:00,01:27,False,False
+251,Prolific Jan2021,5bc2e0ec4f3bfd00012e97b5,Repeat,2685.0,690.0,True,00:00,18:48,False,False
+252,Prolific Jan2021,5dd5105a82569a4c04723f7e,Challenge,5535.0,45.0,True,00:00,11:32,False,False
+253,Prolific Jan2021,5fdde74bfdb6e64c26da591a,Challenge,1860.0,180.0,False,00:00,00:00,False,False
+254,Prolific Jan2021,5e444fa46bcdba04dcf2d695,Challenge,2880.0,60.0,False,00:00,00:00,False,False
+255,Prolific Jan2021,5f2ab8c4c46fc63609d8eedb,Combine,2730.0,135.0,False,00:00,00:00,False,True
+256,Prolific Jan2021,5f2ab8c4c46fc63609d8eedb,Challenge,3030.0,150.0,True,00:00,13:53,False,False
+257,Prolific Jan2021,5bc2e0ec4f3bfd00012e97b5,Combine,960.0,180.0,True,00:00,04:00,False,False
+258,Prolific Jan2021,5daec370e4688e00142ca236,Basic Commands,150.0,0.0,True,00:00,00:51,True,False
+259,Prolific Jan2021,5daec370e4688e00142ca236,Function,675.0,0.0,True,00:00,03:47,False,False
+260,Prolific Jan2021,5bc2e0ec4f3bfd00012e97b5,Challenge,2325.0,225.0,False,00:00,00:00,False,False
+261,Prolific Jan2021,5daec370e4688e00142ca236,Repeat,1155.0,135.0,False,00:00,00:00,False,True
+262,Prolific Jan2021,5daec370e4688e00142ca236,Combine,435.0,105.0,True,00:00,05:11,False,False
+263,Prolific Jan2021,5daec370e4688e00142ca236,Challenge,2865.0,150.0,False,00:00,00:00,False,False
+264,Other,47a8f09b-c74c-4d57-a382-9bdcca962df7,Basic Commands,375.0,15.0,True,00:00,01:09,True,False
+265,Other,47a8f09b-c74c-4d57-a382-9bdcca962df7,Function,135.0,0.0,True,00:00,00:32,True,False
+266,Other,47a8f09b-c74c-4d57-a382-9bdcca962df7,Repeat,705.0,15.0,True,00:00,03:56,True,False
+267,Other,47a8f09b-c74c-4d57-a382-9bdcca962df7,Combine,705.0,0.0,True,00:00,02:28,True,False
+268,Other,47a8f09b-c74c-4d57-a382-9bdcca962df7,Challenge,60.0,15.0,False,00:00,00:00,True,False
+269,Other,0a3319ad-d4bb-4a12-8056-afc90a665fb1,Basic Commands,150.0,0.0,False,00:00,00:00,True,False
+270,Other,0a3319ad-d4bb-4a12-8056-afc90a665fb1,Function,30.0,0.0,False,00:00,00:00,True,True
+271,Other,55ce2fe6-cc03-4904-9ed5-68b0d742fef8,Basic Commands,420.0,0.0,False,00:00,00:00,True,False
+272,Other,7b97505d-dae7-42f8-99ed-71cf74623e7c,Basic Commands,240.0,30.0,False,00:00,00:00,False,False
+273,Other,7b97505d-dae7-42f8-99ed-71cf74623e7c,Function,225.0,0.0,False,00:00,00:00,False,False
+274,Other,3fc83c8d-838f-454a-bee5-da04204f8dab,Basic Commands,45.0,15.0,False,00:00,00:00,False,False
+275,Other,3fc83c8d-838f-454a-bee5-da04204f8dab,Function,45.0,0.0,False,00:00,00:00,False,False
+276,Other,900dc138-5c1c-4de9-8876-19e8cfbb26b6,Basic Commands,45.0,0.0,False,00:00,00:00,False,False
+277,Other,81dbc9ba-cc5c-4549-b05a-c35d57735b82,Basic Commands,45.0,0.0,False,00:00,00:00,False,False
+278,Other,1c36a7e1-b364-4c6f-bffe-8b72e6faa94f,Basic Commands,45.0,30.0,False,00:00,00:00,False,False
+279,Other,729e1a78-8aba-405f-917a-d9ee92cc62d5,Basic Commands,45.0,165.0,False,00:00,00:00,False,True
+280,Other,0f78bf68-90f6-40c3-8321-4d64120ea855,Basic Commands,645.0,75.0,False,00:00,00:00,True,False
+281,Other,db0d8681-8bf0-4ae4-b964-12d8172bdbeb,Basic Commands,45.0,15.0,False,00:00,00:00,True,False
+282,Other,e55b1bcf-8c14-4d7b-a47a-309e09f9deaf,Basic Commands,165.0,30.0,False,00:00,00:00,True,False
+283,Other,e55b1bcf-8c14-4d7b-a47a-309e09f9deaf,Function,15.0,0.0,False,00:00,00:00,False,True
+284,Other,e55b1bcf-8c14-4d7b-a47a-309e09f9deaf,Repeat,60.0,0.0,False,00:00,00:00,True,True
+285,Other,4f667a81-0d8c-4613-9fad-52509de65671,Basic Commands,0.0,0.0,False,00:00,00:00,False,False

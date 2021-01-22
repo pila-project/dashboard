@@ -1,0 +1,22 @@
+userId,data,date,type,currentView,item
+test0701,Welcome,2021-01-07T19:16:41.020Z,PRE_ITEM_COMPLETE,Welcome,
+test0701,PreIntro,2021-01-07T19:16:42.940Z,PRE_ITEM_COMPLETE,PreIntro,PreIntro
+test0701,MeetKarel,2021-01-07T19:16:47.464Z,PRE_ITEM_COMPLETE,MeetKarel,MeetKarel
+test0701,KarelCommandsMove,2021-01-07T19:17:56.356Z,PRE_ITEM_COMPLETE,KarelCommandsMove,KarelCommandsMove
+test0701,KarelCommandsTurnLeft,2021-01-07T19:18:12.964Z,PRE_ITEM_COMPLETE,KarelCommandsTurnLeft,KarelCommandsTurnLeft
+test0701,KarelCommandsPickStone,2021-01-07T19:18:26.206Z,PRE_ITEM_COMPLETE,KarelCommandsPickStone,KarelCommandsPickStone
+test0701,KarelCommandsPlaceStone,2021-01-07T19:18:29.849Z,PRE_ITEM_COMPLETE,KarelCommandsPlaceStone,KarelCommandsPlaceStone
+test0701,CommandsA,2021-01-07T19:19:05.881Z,PRE_ITEM_COMPLETE,CommandsA,CommandsA
+test0701,CommandsB,2021-01-07T19:19:48.698Z,PRE_ITEM_COMPLETE,CommandsB,CommandsB
+test0701,FirstProgram,2021-01-07T19:20:20.733Z,PRE_ITEM_COMPLETE,FirstProgram,FirstProgram
+test0701,"<xml><block type=""karel_main"" deletable=""false"" movable=""false"" x=""20"" y=""20""><statement name=""program""><block type=""karel_move""><next><block type=""karel_move""><next><block type=""karel_move""></block></next></block></next></block></statement></block></xml>",2021-01-07T19:21:01.907Z,UPDATE_CODE_move,ModifyMoves,ModifyMoves
+test0701,"<xml><block type=""karel_main"" deletable=""false"" movable=""false"" x=""20"" y=""20""><statement name=""program""><block type=""karel_move""><next><block type=""karel_move""><next><block type=""karel_move""></block></next></block></next></block></statement></block></xml>",2021-01-07T19:21:01.909Z,UPDATE_CODE_move,ModifyMoves,ModifyMoves
+test0701,"<xml><block type=""karel_main"" deletable=""false"" movable=""false"" x=""20"" y=""20""><statement name=""program""><block type=""karel_move""><next><block type=""karel_move""><next><block type=""karel_move""></block></next></block></next></block></statement></block></xml>",2021-01-07T19:21:01.912Z,UPDATE_CODE_move,ModifyMoves,ModifyMoves
+test0701,"<xml><block type=""karel_main"" deletable=""false"" movable=""false"" x=""20"" y=""20""><statement name=""program""><block type=""karel_move""><next><block type=""karel_move""><next><block type=""karel_move""></block></next></block></next></block></statement></block></xml>",2021-01-07T19:21:02.772Z,BUTTON_CLICK_run,ModifyMoves,ModifyMoves
+test0701,successful,2021-01-07T19:21:03.583Z,RUN_DONE,ModifyMoves,ModifyMoves
+test0701,ModifyMoves,2021-01-07T19:21:06.089Z,PRE_ITEM_COMPLETE,ModifyMoves,ModifyMoves
+test0701,PreDone,2021-01-07T19:21:08.082Z,PRE_ITEM_COMPLETE,PreDone,PreDone
+test0701,IntroExplainTasks,2021-01-07T19:21:17.973Z,PRE_ITEM_COMPLETE,IntroExplainTasks,IntroExplainTasks
+test0701,IntroExplainEditor,2021-01-07T19:21:20.266Z,PRE_ITEM_COMPLETE,IntroExplainEditor,IntroExplainEditor
+test0701,CommandsMLMR,2021-01-07T19:21:29.837Z,UPDATE_CURRENT_VIEW,dashboard,Basic Commands
+test0701,dashboard,2021-01-07T19:21:40.146Z,UPDATE_CURRENT_VIEW,CommandsMLMR,Basic Commands
