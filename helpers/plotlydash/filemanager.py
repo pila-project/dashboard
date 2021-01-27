@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import threading
 from collections import Counter
+import datetime
 
 def DataBars(df, column):
     n_bins = 100
@@ -27,8 +28,8 @@ def DataBars(df, column):
             'background': (
                 """
                     linear-gradient(90deg,
-                    #0074D9 0%,
-                    #0074D9 {max_bound_percentage}%,
+                    #6eb08c 0%,
+                    #6eb08c {max_bound_percentage}%,
                     white {max_bound_percentage}%,
                     white 100%)
                 """.format(max_bound_percentage=max_bound_percentage)
@@ -51,11 +52,12 @@ def FirestoreListener(collection_name: str = 'karelDB'):
 
     ## The  provided callback is run on the snapshot of the documents.
     def on_snapshot(collection_snapshot, changes, read_time):
-        for doc in collection_snapshot:
-            if doc.to_dict() not in firestore_collection:
-                firestore_collection.append(doc.to_dict())
-            else:
-                pass
+        # for doc in collection_snapshot:
+        #     if doc.to_dict() not in firestore_collection:
+        #         firestore_collection.append(doc.to_dict())
+        #     else:
+        #         pass
+        [firestore_collection.append(doc.to_dict()) for doc in collection_snapshot if doc.to_dict() not in firestore_collection]
         read_time_list.append(read_time)
 
         callback_done.set()
@@ -68,50 +70,16 @@ def FirestoreListener(collection_name: str = 'karelDB'):
     return firestore_collection, read_time_list
 
 
-def ReadFirestoreCollection(collection_name: str = "karelDB"):
+def ReadFirestoreCollection(db_name: str = "karelDB"):
 
     db = firestore.Client.from_service_account_json("keys/pila-277913-44ed571ccec0.json")
-
+    print('Reading data at {}'.format(datetime.datetime.now()))
     firestore_collection = []
-    [firestore_collection.append(dic.to_dict()) for dic in db.collection(collection_name).stream()]
-
+    [firestore_collection.append(doc.to_dict()) for doc in db.collection(db_name).stream() if doc.to_dict() not in firestore_collection]
+    print('Returning data at {}'.format(datetime.datetime.now()))
     return firestore_collection
 
 
-def DataBars(df, column):
-    n_bins = 100
-    bounds = [i * (1.0 / n_bins) for i in range(n_bins + 1)]
-    ranges = [
-        ((df[column].max() - df[column].min()) * i) + df[column].min()
-        for i in bounds
-    ]
-    styles = []
-    for i in range(1, len(bounds)):
-        min_bound = ranges[i - 1]
-        max_bound = ranges[i]
-        max_bound_percentage = bounds[i] * 100
-        styles.append({
-            'if': {
-                'filter_query': (
-                    '{{{column}}} >= {min_bound}' +
-                    (' && {{{column}}} < {max_bound}' if (i < len(bounds) - 1) else '')
-                ).format(column=column, min_bound=min_bound, max_bound=max_bound),
-                'column_id': column
-            },
-            'background': (
-                """
-                    linear-gradient(90deg,
-                    #004c6d 0%,
-                    #004c6d {max_bound_percentage}%,
-                    white {max_bound_percentage}%,
-                    white 100%)
-                """.format(max_bound_percentage=max_bound_percentage)
-            ),
-            'paddingBottom': 2,
-            'paddingTop': 2
-        })
-
-    return styles
 
 
 

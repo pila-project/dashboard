@@ -14,7 +14,7 @@ from dash.dependencies import Input, Output
 from .layout import html_layout
 import plotly.express as px
 import datetime, time
-from .filemanager import FirestoreListener, DataBars, MaxValueTableStyler, ResultsDataMaker
+from .filemanager import FirestoreListener, DataBars, MaxValueTableStyler, ResultsDataMaker, ReadFirestoreCollection
 from google.cloud import firestore
 from collections import Counter
 from .tabs import Table
@@ -45,54 +45,100 @@ def create_dashboard(server):
     dash_app.layout = \
         html.Div([
             dcc.Tabs(
-                    [dcc.Tab(
+                parent_className='row',
+                className='row',
+                #style={'width': '100%'},
+                children = [dcc.Tab(
+                    # style={'width': '100%'},
                         label='User View',
                         children =
                         html.Div(
                             [
-                                dcc.Dropdown(id='dropdown-group', options=options,
-                                             placeholder='Select...', value='Prolific Jan2021'),
-                                dcc.Dropdown(id='dropdown-user', placeholder='Select...'),
+                                html.Div(children=[
+                                                   html.Div(children=dcc.Dropdown(id='dropdown-group', options=options,
+                                             placeholder='Select...', value='Prolific Jan2021'),style={'display': 'inline-block','vertical-align': 'top','width':'30%',
+                                                            'margin-top': '15px','margin-right': '15px','margin-bottom': '15px'}),
+                                                   html.Div(children=dcc.Dropdown(id='dropdown-user', placeholder='Select...'),
+                                                            style={'display': 'inline-block', 'vertical-align': 'top',
+                                                                   'width': '30%', 'margin-bottom': '15px', 'margin-right': '25px', 'margin-top':'15px'}),
+                                    html.Div(id='loader-text1',
+                                             style={'display': 'inline-block', 'vertical-align': 'top', 'font':'30px Arial',
+                                                    'width': '30%', 'margin-bottom': '15px', 'margin-top': '15px'})
+                                                   ], style = {'width':'100%'}
+                                         ),
                                 dash_table.DataTable(
                                     id='data-table1',
                                     page_action="native",
                                     page_size=10,
                                     style_data={'width': '100px'},
-                                    style_cell_conditional=[{'if': {'column_id': 'userId'},'width': '250px'}],
+                                    style_cell_conditional=[{'if': {'column_id': 'userId'},'width': '250px'},{'if': {'column_id': 'success_emoji'},'width': '30px'}],
                                     style_table={'overflowX': 'auto'},
-                                    columns = [{"name": i.capitalize(), "id": i} for i in ['sessionId', 'userId', 'item' ,'success_emoji','n_actions', 'n_attempts',
+                                    columns = [{"name": i.capitalize(), "id": i} for i in ['item' ,'avg_n_successes','success_emoji','n_actions', 'n_attempts',
                                                                               'timeto_first_action', 'timeto_success']],
-                                    style_data_conditional=[
-                                        {'if': {'column_id': 'n_actions', 'filter_query': '{n_actions_fmt} eq "1"'},
-                                         'backgroundColor': '#6eb08c'},
-                                        {'if': {'column_id': 'n_actions',
-                                                'filter_query': '{n_actions_fmt} eq "-1"'},
-                                         'backgroundColor': '#ec8386'},  # 'color': 'transparent'
-                                        {'if': {'column_id': 'n_attempts',
-                                                'filter_query': '{n_attempts_fmt} eq "1"'},
-                                         'backgroundColor': '#6eb08c'},
-                                        {'if': {'column_id': 'n_attempts',
-                                                'filter_query': '{n_attempts_fmt} eq "-1"'},
-                                         'backgroundColor': '#ec8386'},
-                                        {'if': {'column_id': 'timeto_first_action',
-                                                'filter_query': '{timeto_first_action} > {avg_timeto_first_action}'},
-                                         'backgroundColor': '#6eb08c'},
-                                        {'if': {'column_id': 'timeto_first_action',
-                                                'filter_query': '{timeto_first_action} < {avg_timeto_first_action}'},
-                                         'backgroundColor': '#ec8386'},
-                                        {'if': {'column_id': 'timeto_success',
-                                                'filter_query': '{timeto_success} > {avg_timeto_success}'},
-                                         'backgroundColor': '#6eb08c'},
-                                        {'if': {'column_id': 'timeto_success',
-                                                'filter_query': '{timeto_success} < {avg_timeto_success}'},
-                                         'backgroundColor': '#ec8386'},
-                                        {
-                                            'if': {'column_id': 'avg_n_successes'},
-                                            'color': 'transparent'},
-                                    ]
-                                )
+                                    # style_data_conditional=
+                                ),
+                                html.Div(children='''Legend: Purple background corresponds to a value higher than the reference group, orange background to a lower value. \n
+                                Transparent background to a value in line with the reference group ''')
                             ]
-                        ))]
+                        )),
+                        dcc.Tab(label='Glance view',
+                                style={'margin':'10px'},
+                                children = html.Div([
+                                    html.Div([
+                                        html.Div(children=dcc.Dropdown(id='dropdown-group2', options=options,
+                                                                       placeholder='Select...',
+                                                                       value='Prolific Jan2021'),
+                                                 style={'display': 'inline-block', 'vertical-align': 'top','margin-top': '15px',
+                                                        'margin-bottom': '15px', 'margin-right': '15px', 'width': '30%'}),
+                                        html.Div(id='loader-text2',
+                                                 style={'display': 'inline-block', 'vertical-align': 'top',
+                                                        'font': '30px Arial',
+                                                        'width': '30%', 'margin-bottom': '15px', 'margin-top': '15px'})
+                                    ], style = {'width':'100%'}),
+
+                                    dash_table.DataTable(
+                                        id='data-table2',
+                                        page_action="native",
+                                        page_size=100,
+                                        style_data={'width': '100px'},
+                                        style_cell_conditional=[{'if': {'column_id': 'userId'},'width': '250px'}],
+                                        style_table={'overflowX': 'auto'},
+                                        columns = [{"name": i.capitalize(), "id": i} for i in ['sessionId','userId','Basic Commands', 'Function', 'Repeat' ,'Combine','Challenge']],
+                                        style_data_conditional=[
+                                            {'if':{'column_id':'Basic Commands','filter_query': '{Basic Commands} eq "True"'},'backgroundColor': '#6eb08c', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Basic Commands',
+                                                    'filter_query': '{Basic Commands} eq "False"'},
+                                             'backgroundColor': '#ec8386', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Function',
+                                                    'filter_query': '{Function} eq "True"'},
+                                             'backgroundColor': '#6eb08c', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Function',
+                                                    'filter_query': '{Function} eq "False"'},
+                                             'backgroundColor': '#ec8386', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Repeat',
+                                                    'filter_query': '{Repeat} eq "True"'},
+                                             'backgroundColor': '#6eb08c', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Repeat',
+                                                    'filter_query': '{Repeat} eq "False"'},
+                                             'backgroundColor': '#ec8386', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Combine',
+                                                    'filter_query': '{Combine} eq "True"'},
+                                             'backgroundColor': '#6eb08c', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Combine',
+                                                    'filter_query': '{Combine} eq "False"'},
+                                             'backgroundColor': '#ec8386', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Challenge',
+                                                    'filter_query': '{Challenge} eq "True"'},
+                                             'backgroundColor': '#6eb08c', 'color': 'transparent'},
+                                            {'if': {'column_id': 'Challenge',
+                                                    'filter_query': '{Challenge} eq "False"'},
+                                             'backgroundColor': '#ec8386', 'color': 'transparent'}
+                                        ]
+                                    )
+                                                     ]
+                                )
+                        )
+                    ]
             ),
 
             dcc.Interval(
@@ -103,9 +149,11 @@ def create_dashboard(server):
 
             html.Div(id='data-container', style={'display': 'none'})
 
-        ], id='dash-container', className='row')
+        ], id='dash-container', style = {'width':'100%','margin':'20px'}, className='row')
 
     raw_data_list, read_time_list = FirestoreListener(collection_name='karelDB')
+
+    #raw_data_list = ReadFirestoreCollection(db_name='karelDB')
 
     init_callbacks(dash_app, raw_data_list, dropdown_dict)
 
@@ -151,7 +199,7 @@ def init_callbacks(dash_app, raw_data_list, dropdown_dict):
 
 
     @dash_app.callback(
-        Output('data-table1', 'data'),
+        [Output('data-table1', 'data'),Output('data-table1','style_data_conditional'),Output('loader-text1', 'children')],
         [Input('dropdown-user', 'value'),Input('data-container','children')]
     )
     def update_output(value, dfs):
@@ -173,16 +221,73 @@ def init_callbacks(dash_app, raw_data_list, dropdown_dict):
             beast['n_attempts_fmt'] = np.where(beast['n_attempts'] < beast['avg_n_attempts'] * .5, -1,
                                                beast['n_attempts_fmt'])
 
-            #print(DataBars(beast, 'avg_n_successes'))
+            style_data_conditional = DataBars(beast, 'avg_n_successes')
+            #style_data_conditional = []
+
+            beast['avg_n_successes'] = beast['avg_n_successes'].values.round(1)
+
             beast = beast.astype('str')
             beast['success_emoji'] = beast['success'].apply(lambda x: '✅' if x == 'True' else '⭕')
 
-            return beast.loc[beast.userId == value].to_dict('records')
+            style_data_conditional += [
+                                        {'if': {'column_id': 'n_actions', 'filter_query': '{n_actions_fmt} eq "1"'},
+                                         'backgroundColor': 'rgb(160,81,149,0.5)'},
+                                        {'if': {'column_id': 'n_actions',
+                                                'filter_query': '{n_actions_fmt} eq "-1"'},
+                                         'backgroundColor': 'rgba(255,166,0,0.5)'},  # 'color': 'transparent'
+                                        {'if': {'column_id': 'n_attempts',
+                                                'filter_query': '{n_attempts_fmt} eq "1"'},
+                                         'backgroundColor': 'rgb(160,81,149,0.5)'},
+                                        {'if': {'column_id': 'n_attempts',
+                                                'filter_query': '{n_attempts_fmt} eq "-1"'},
+                                         'backgroundColor': 'rgba(255,166,0,0.5)'},
+                                        {'if': {'column_id': 'timeto_first_action',
+                                                'filter_query': '{timeto_first_action} > {avg_timeto_first_action}'},
+                                         'backgroundColor': 'rgb(160,81,149,0.5)'},
+                                        {'if': {'column_id': 'timeto_first_action',
+                                                'filter_query': '{timeto_first_action} < {avg_timeto_first_action}'},
+                                         'backgroundColor': 'rgba(255,166,0,0.5)'},
+                                        {'if': {'column_id': 'timeto_success',
+                                                'filter_query': '{timeto_success} > {avg_timeto_success}'},
+                                         'backgroundColor': 'rgb(160,81,149,0.5)'},
+                                        {'if': {'column_id': 'timeto_success',
+                                                'filter_query': '{timeto_success} < {avg_timeto_success}'},
+                                         'backgroundColor': 'rgba(255,166,0,0.5)'},
+                                        {
+                                            'if': {'column_id': 'avg_n_successes'},
+                                            'color': 'transparent'},
+                                    ]
+            children_text = '''🎉'''
+            return beast.loc[beast.userId == value].to_dict('records'), style_data_conditional, children_text
 
         except TypeError as e:
             #print(e)
-            return dash.no_update
+            children_text = '''⏳'''
+            return dash.no_update, dash.no_update, children_text
 
+    @dash_app.callback(
+        [Output('data-table2', 'data'),Output('loader-text2', 'children')],
+        [Input('dropdown-group2', 'value'), Input('data-container', 'children')]
+    )
+    def update_output(value, dfs):
+        try:
+
+            ds = json.loads(dfs)  # ⭐
+            user_df = pd.read_json(ds['user'], orient='records')
+
+            pivot_df = user_df.pivot(index='userId', columns='item', values='success')
+            pivot_df = pd.merge(pivot_df, user_df[['userId', 'sessionId']].drop_duplicates(), how='left', on='userId', validate='many_to_one')
+
+            pivot_df.fillna(False, inplace=True)
+            pivot_df = pivot_df.astype('str')
+            print("Ready to display table 2...")
+            children_text = '''🎉'''
+            return pivot_df.loc[pivot_df.sessionId==value].to_dict('records'), children_text
+
+        except TypeError as e:
+            # print(e)
+            children_text = '''⏳'''
+            return dash.no_update, children_text
 
 
 dropdown_dict= {

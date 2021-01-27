@@ -8,6 +8,11 @@ body,html{
 .row .col{
 	padding:0!important
 }
+
+.Select-menu-outer {
+     --accent : black;
+}
+
 header{
 	position:relative;
 	width:100%;
